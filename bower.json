@@ -1,9 +1,0 @@
-{
-  "name": "test-drive-your-code-with-test-more",
-  "private": true,
-  "dependencies": {
-    "bootstrap-sass-official": "~3.3.1",
-    "modernizr": "~2.8.1",
-    "reveal.js": "~3.0.0"
-  }
-}

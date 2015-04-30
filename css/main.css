@@ -1,0 +1,6 @@
+.reveal section img.no-border {
+  border: 0;
+  background: transparent; }
+
+.reveal h1.dark, .reveal h2.dark, .reveal h3.dark, .reveal h4.dark, .reveal h5.dark, .reveal h6.dark {
+  color: rgba(0, 0, 0, 0.6); }
