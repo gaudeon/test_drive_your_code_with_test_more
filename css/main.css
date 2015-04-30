@@ -2,5 +2,6 @@
   border: 0;
   background: transparent; }
 
-.reveal h1.dark, .reveal h2.dark, .reveal h3.dark, .reveal h4.dark, .reveal h5.dark, .reveal h6.dark {
-  color: rgba(0, 0, 0, 0.6); }
+.reveal h1.overlay-text, .reveal h2.overlay-text, .reveal h3.overlay-text, .reveal h4.overlay-text, .reveal h5.overlay-text, .reveal h6.overlay-text {
+  color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(255, 255, 255, 0.75); }
