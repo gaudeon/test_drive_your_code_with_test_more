@@ -1,7 +1,13 @@
 .reveal section img.no-border {
   border: 0;
-  background: transparent; }
-
-.reveal h1.overlay-text, .reveal h2.overlay-text, .reveal h3.overlay-text, .reveal h4.overlay-text, .reveal h5.overlay-text, .reveal h6.overlay-text {
+  background: transparent;
+  box-shadow: none; }
+.reveal h1.overlay-text, .reveal h2.overlay-text, .reveal h3.overlay-text, .reveal h4.overlay-text, .reveal h5.overlay-text, .reveal h6.overlay-text, .reveal p.overlay-text {
   color: rgba(0, 0, 0, 0.8);
   background-color: rgba(255, 255, 255, 0.75); }
+.reveal h1.push-down, .reveal h2.push-down, .reveal h3.push-down, .reveal h4.push-down, .reveal h5.push-down, .reveal h6.push-down, .reveal p.push-down {
+  margin-top: 10em; }
+.reveal h1.push-up, .reveal h2.push-up, .reveal h3.push-up, .reveal h4.push-up, .reveal h5.push-up, .reveal h6.push-up, .reveal p.push-up {
+  margin-top: -7em; }
+.reveal p.overlay-text {
+  padding: 1em; }
