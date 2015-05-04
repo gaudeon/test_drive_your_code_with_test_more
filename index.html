@@ -77,15 +77,26 @@
 				<section>
 					<h2>Why Testing?</h2>
 					<ul>
-						<li class="fragment">Catch human errors.</li>
-						<li class="fragment">Gain a different perspective of how your code works.</li>
-						<li class="fragment">Build a suite of regression tests for feature development.</li>
-						<li class="fragment">Improving software quality</li>
+						<li class="fragment">Reduce human error</li>
+						<li class="fragment">or gain a different perspective of how your code works.</li>
+						<li class="fragment">This could lead to structural improvements without changing code behavior.</li>
+						<li class="fragment">Plus you are building a suite of regression tests for feature development and future modifications.</li>
+						<li class="fragment">Thus improving your overall software quality!</li>
 					</ul>
+					<p class="fragment">There is a <span class="smaller">small</span> caveat...</p>
 					<aside class="notes">
 					</aside>
 				</section>
-
+				
+				<section data-background="images/flickr.com/bugged.jpg">
+					<h2 class="overlay-text">You can't prove the absence of bugs!</h2>
+					<aside class="notes">
+						You won't account for everything in a trivial program let alone a complex one.
+						Your tests themselves could have "bugs". But we as software engineers do seek to make our software as bug free as possible right?
+						So it's better to have a reduced risk of unknown bugs by testing your code than not having any tests at all.
+					</aside>
+				</section>
+				
 				<section data-background="images/gratisography.com/torn_page.jpg">
 					<h1 class="overlay-text">What's this TDD thing?</h1>
 					<aside class="notes">
@@ -124,11 +135,12 @@
 
 				<section>
 					<h2>It's still just testing.</h2>
-					<ul>
-						<li class="fragment">Catch human errors.</li>
-						<li class="fragment">Gain a different perspective of how your code works.</li>
-						<li class="fragment">Build a suite of regression tests for feature development.</li>
-						<li class="fragment">Improving software quality</li>
+					<ul class="fragment">
+						<li>Catch human errors</li>
+						<li>or gain a different perspective of how your code works.</li>
+						<li>This could lead to structural improvements without changing code behavior.</li>
+						<li>Plus you are building a suite of regression tests for feature development and future modifications.</li>
+						<li>Thus improving your overall software quality!</li>
 					</ul>
 					<p class="fragment">However...</p>
 					<aside class="notes">
@@ -155,16 +167,144 @@
 				<section data-state="full-size" data-background="images/flickr.com/stormtrooper.jpg">
 					<h3 class="overlay-text push-down">No worries...</h3>
 					<aside class="notes">
-						Find a methodology that works for you.
+						Find a methodology that works for you. Just be sure to test your code to death and test it again after that. 
 					</aside>
 				</section>
 
 				<section>
-					<p>However, if you like the idea of Test Driven Design, you might also want to look into Behavior Driven Design.</p>
+					<h3>However...</h3>
+					<p>...if you like the idea of Test Driven Design, you might also want to look into Behavior Driven Design.</p>
 					<aside class="notes">
 						That's beyond the scope of this talk. However I will mention one of the things I have been really liking from BDD, even though I may not be following that entire process. That is using three specific words to frame my tests: Given, When and Should
 					</aside>
 				</section>
+				
+				<section data-background="images/flickr.com/pure_gotham.jpg">
+					<h1 class="overlay-text">Testing Architecture</h1>
+					<aside class="notes">
+					</aside>
+				</section>
+				
+				<section>
+					<h2>Overview</h2>
+					<div>
+						<p class="fragment indent-1">Test Runner</p>
+						<p class="fragment indent-2">&#8627; Test Harness</p>
+						<p class="fragment indent-3">&#8627; Test Framework</p>
+						<p class="fragment indent-4">&#8627; Test Module(s)</p>
+						<p class="fragment indent-5">&#8627; Test Assertion(s)</p>
+					</div>
+					<aside class="notes">
+					</aside>
+				</section>
+				
+				<section>
+					<h2>Test Runner</h2>
+					<p>Software utilizing some kind test harness to run your tests.</p>
+					<div class="fragment">
+						<p><em>prove</em> is a built-in test runner for Perl.</p>
+						<code>prove -v -Ilib t/</code>
+					</div>
+					<aside class="notes">
+					</aside>
+				</section>
+				
+				<section>
+					<h2>Test Harness</h2>
+					<p>Run a specified set of test modules (units) and report it's findings.</p>
+					<div class="fragment">
+						<p><em>TAP::Harness</em> is a built-in test harness for Perl.</p>
+						<pre>
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+
+use TAP::Harness;
+
+my $harness = TAP::Harness->new({
+	verbosity => 1,
+	lib       => [ 'lib' ],
+});
+
+$harness->runtests(@ARGV);</pre>
+					</div>
+					<aside class="notes">
+						Though originally it was called Test::Harness. There is still a Test::Harness module for backwards compatibility, it just uses TAP::Harness.
+					</aside>
+				</section>
+				
+				<section>
+					<h2>Test Framework</h2>
+					<p>A set of functions that check some result/aspect of a code statement and declares whether or not it is ok. The test harness listens for these declarations.</p>
+					<div class="fragment">
+<pre>
+use Test::Simple;
+
+use Test::More;
+
+use Test::Data;
+
+use Test::Deep;</pre>
+					</div>
+				</section>
+				
+				<section>
+					<h2>Test Module</h2>
+					<p>A file, utilizing a test framework, containing a series of tests to run.</p>
+					<div class="fragment">
+<pre>
+use strict;
+use warnings;
+
+use Test::More tests => 1;
+
+sub life_the_universe_and_everything() { 42 }
+
+ok( life_the_universe_and_everything() == 42 );
+
+done_testing();</pre>
+					</div>
+				</section>
+				
+				<section>
+					<h2>Test Assertion</h2>
+					<p>A test for some aspect of the thing being tested.</p>
+					<div class="fragment">
+<pre>
+# snippet
+ok( life_the_universe_and_everything() == 42 );</pre>
+					</div>
+				</section>
+				
+				
+				<section data-background="images/flickr.com/test_tubes.jpg">
+					<h1 class="overlay-text">TAP</h1>
+					<aside class="notes">
+						Test Anything Protocol
+					</aside>
+				</section>
+				
+				<section>
+					<h2>What is it?</h2>
+					<p>A simple text-based output format for communicating the outcome of tests from test modules executed, for display purposes, by a test harness.</p>
+					<aside class="notes">
+						Long-winded definition
+					</aside>
+				</section>
+				
+				<section data-background="images/flickr.com/sidewalk_closed.jpg">
+					<h1 class="overlay-text">Huh?</h1>
+					<aside class="notes">
+					</aside>
+				</section>
+				
+				<section>
+					<aside class="notes">
+						It's data glue...
+					</aside>
+				</section>
+				
 			</div>
 
 		</div>

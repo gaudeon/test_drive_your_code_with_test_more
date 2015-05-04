@@ -20,7 +20,26 @@
         }
     }
 
-    p.overlay-text {
+    p {
+        &.overlay-text {
+           padding: 1em;
+        }
+        
+        @for $n from 1 through 10 {
+            &.indent-#{$n} {
+                text-align: left;
+                margin-left: 1.25em * $n;
+            }
+        }
+    }
+    
+    span {
+        &.smaller {
+            font-size: medium;
+        }
+    }
+    
+    pre {
         padding: 1em;
     }
 }

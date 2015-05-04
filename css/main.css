@@ -11,3 +11,37 @@
   margin-top: -7em; }
 .reveal p.overlay-text {
   padding: 1em; }
+.reveal p.indent-1 {
+  text-align: left;
+  margin-left: 1.25em; }
+.reveal p.indent-2 {
+  text-align: left;
+  margin-left: 2.5em; }
+.reveal p.indent-3 {
+  text-align: left;
+  margin-left: 3.75em; }
+.reveal p.indent-4 {
+  text-align: left;
+  margin-left: 5em; }
+.reveal p.indent-5 {
+  text-align: left;
+  margin-left: 6.25em; }
+.reveal p.indent-6 {
+  text-align: left;
+  margin-left: 7.5em; }
+.reveal p.indent-7 {
+  text-align: left;
+  margin-left: 8.75em; }
+.reveal p.indent-8 {
+  text-align: left;
+  margin-left: 10em; }
+.reveal p.indent-9 {
+  text-align: left;
+  margin-left: 11.25em; }
+.reveal p.indent-10 {
+  text-align: left;
+  margin-left: 12.5em; }
+.reveal span.smaller {
+  font-size: medium; }
+.reveal pre {
+  padding: 1em; }
