@@ -269,7 +269,7 @@ done_testing();</pre>
 				
 				<section>
 					<h2>Test Assertion</h2>
-					<p>A test for some aspect of the thing being tested.</p>
+					<p>A test for some aspect of the software usually related to the test modules' overall purpose.</p>
 					<div class="fragment">
 <pre>
 # snippet
@@ -299,12 +299,147 @@ ok( life_the_universe_and_everything() == 42 );</pre>
 					</aside>
 				</section>
 				
-				<section>
+				<section data-background="images/flickr.com/elmers_glue.jpg">
+					<h3 class="overlay-text">TAP is the glue between a test framework and test harness</h3>
 					<aside class="notes">
-						It's data glue...
 					</aside>
 				</section>
 				
+				<section>
+					<h2>Cool things about TAP</h2>
+					<ul>
+						<li class="fragment">It's been around a while... since 1988!</li>
+						<li class="fragment">While it started in Perl, it is now implemented in many other languages such as C, C++, Erlang, Javascript, PHP, Python and Ruby.</li>
+						<li class="fragment">It has it's own EBNF Grammar. ( TAP::Parser::Grammar )</em></li>
+						<li class="fragment">It's still evolving. ( https://github.com/TestAnything )</li>
+					</ul>
+					<aside class="notes">
+						They are currently working on version 14.
+					</aside>
+				</section>
+				
+				<section>
+					<h2>Sample 1</h2>
+					<h3>Things are good!</h3>
+<pre>
+ok 1 - Result is a SCALAR and not a reference
+ok 2 - JSON decoded back to hash correctly
+1..2</pre>
+					<aside class="notes">
+					</aside>
+				</section>
+				
+				<section>
+					<h2>Sample 2</h2>
+					<h3>Things didn't go as smoothly :(</h3>
+<pre>
+ok 1 - Result is a SCALAR and not a reference
+not ok 2 - JSON decoded back to hash correctly
+#   Failed test 'JSON decoded back to hash correctly'
+#   at t/when_viewing_response_as_json.t line 85.
+#     Structures begin differing at:
+#          $got->{plan} = Does not exist
+#     $expected->{plan} = ARRAY(0x7fa71b0b36e8)
+1..2
+# Looks like you failed 1 test of 2.</pre>
+					<p class="fragment">If you are following TDD practices you will see <em>not ok</em> a lot.</p>
+					<aside class="notes">
+					</aside>
+				</section>
+				
+				<section>
+					<h3>But that is sent to the test harness... so what does the harness show?</h3>
+					<aside class="notes">
+					</aside>
+				</section>
+				
+				<section>
+					<h2>Sample 1</h2>
+<pre>
+t/when_viewing_response_as_json.t ..
+ok 1 - Result is a SCALAR and not a reference
+ok 2 - JSON decoded back to hash correctly
+1..2
+ok
+All tests successful.
+Files=1, Tests=2,  0 wallclock secs ( 0.03 usr  0.01 sys +  0.06 cusr  0.01 csys =  0.11 CPU)
+Result: PASS</pre>
+					<aside class="notes">
+					</aside>
+				</section>
+				
+				<section>
+					<h2>Sample 2</h2>
+<pre>
+t/when_viewing_response_as_json.t ..
+ok 1 - Result is a SCALAR and not a reference
+not ok 2 - JSON decoded back to hash correctly
+
+#   Failed test 'JSON decoded back to hash correctly'
+#   at t/when_viewing_response_as_json.t line 85.
+#     Structures begin differing at:
+#          $got->{something} = Does not exist
+#     $expected->{something} = HASH(0x7ff8f21f9ce0)
+1..2
+# Looks like you failed 1 test of 2.
+Dubious, test returned 1 (wstat 256, 0x100)
+Failed 1/2 subtests
+
+Test Summary Report
+-------------------
+t/when_viewing_response_as_json.t (Wstat: 256 Tests: 2 Failed: 1)
+  Failed test:  2
+  Non-zero exit status: 1
+Files=1, Tests=2,  0 wallclock secs ( 0.02 usr  0.01 sys +  0.06 cusr  0.01 csys =  0.10 CPU)
+Result: FAIL</pre>
+					<aside class="notes">
+					</aside>
+				</section>
+				
+				<section>
+					<h2>CPAN Modules</h2>
+					<pre>cpan -i &lt;module&gt;</pre>
+					<div class="fragment">
+						<p>Idealy modules have great test coverage and when you install one you will see TAP output interpretted by a test harness.</p>
+<pre>
+Running make test
+PERL_DL_NONLAZY=1 /usr/bin/perl "-MExtUtils::Command::MM" "-e" "test_harness(0, 'blib/lib', 'blib/arch')" t/*.t
+t/test_travigator.t .. ok
+All tests successful.
+Files=1, Tests=1,  0 wallclock secs ( 0.02 usr  0.01 sys +  0.01 cusr  0.00 csys =  0.04 CPU)
+Result: PASS
+  MDMONSEN/Acme-Travigator-0.005.tar.gz
+  /usr/bin/make test -- OK</pre>
+					</div>
+					<aside class="notes">
+					</aside>
+				</section>
+				
+				<section>
+					<h2>CPAN Modules</h2>
+					<p>Then if it succeeds you get your module installed, otherwise you force it to install, right?</p>
+					<pre>cpan -if &lt;module&gt;</pre>
+					<aside class="notes">
+						I put if there on purpose, because if it installs then you are lucky.
+					</aside>
+				</section>
+				
+				<section>
+					<h2>CPAN Modules</h2>
+					<p>It is likely a better idea to read what the tests are reporting and try to resolve the failure.</p>
+				</section>
+				
+				<section data-background="images/flickr.com/car_crash.jpg">
+					<h3 class="overlay-text push-down-sm">
+						<p class="indent-1">
+							1..1<br>
+							not ok 1 - Cars slowed down
+						</p>
+					</h3>
+					<aside class="notes">
+						After all we wouldn't want something bad happening.
+					</aside>
+				</section>
 			</div>
 
 		</div>
