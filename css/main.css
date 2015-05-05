@@ -2,6 +2,15 @@
   border: 0;
   background: transparent;
   box-shadow: none; }
+.reveal section div.credit {
+  font-size: small;
+  color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  width: 100%;
+  transform: rotate(-90deg);
+  left: 51em;
+  top: 50%; }
 .reveal h1.overlay-text, .reveal h2.overlay-text, .reveal h3.overlay-text, .reveal h4.overlay-text, .reveal h5.overlay-text, .reveal h6.overlay-text, .reveal p.overlay-text {
   color: rgba(0, 0, 0, 0.8);
   background-color: rgba(255, 255, 255, 0.75); }

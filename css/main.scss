@@ -1,8 +1,21 @@
 .reveal {
-    section img.no-border {
-        border: 0;
-        background: transparent;
-        box-shadow: none;
+    section {
+        img.no-border {
+            border: 0;
+            background: transparent;
+            box-shadow: none;
+        }
+        
+        div.credit {
+            font-size: small;
+            color: rgba(0,0,0,.8);
+            background-color: rgba(255,255,255,.3);
+            position: absolute;
+            width: 100%;
+            transform: rotate(-90deg);
+            left: 51em;
+            top: 50%;
+        }
     }
 
     h1, h2, h3, h4, h5, h6, p {
