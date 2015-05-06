@@ -51,169 +51,182 @@
 					</aside>
                 </section>
 
-                <section data-state="notebook" data-background="images/raumrot.com/notebook.jpg">
-                    <h1 class="overlay-text">Story...</h1>
-                    <aside class="notes">
-                      I first got into Perl 20 years ago...<br>
-                      I didn't start testing my Perl code until about a decade ago...
-                      I didn't get into TDD until a couple years ago...
-                      I'm still not 100% TDD, there is a lot of temptation to be lazy about my code is great and powerful...
-                    </aside>
-                </section>
-
+				<!-- STORY -->
 				<section>
-					<h1>...the Moral?</h1>
-					<h2 class="fragment">Don't be like me</h2>
-					<aside class="notes">
-					</aside>
-				</section>
-
-				<section data-state="cats" data-background="images/gratisography.com/cats.jpg">
-					<h1 class="overlay-text">Start testing now!</h1>
-					<aside class="notes">
-					</aside>
-				</section>
-
-				<section>
-					<h2>Why Testing?</h2>
-					<ul>
-						<li class="fragment">Reduce human error</li>
-						<li class="fragment">or gain a different perspective of how your code works.</li>
-						<li class="fragment">This could lead to structural improvements without changing code behavior.</li>
-						<li class="fragment">Plus you are building a suite of regression tests for feature development and future modifications.</li>
-						<li class="fragment">Thus improving your overall software quality!</li>
-					</ul>
-					<p class="fragment">There is a <span class="smaller">small</span> caveat...</p>
-					<aside class="notes">
-					</aside>
+					<section data-state="notebook" data-background="images/raumrot.com/notebook.jpg">
+						<h1 class="overlay-text">Story...</h1>
+						<aside class="notes">
+						  I first got into Perl 20 years ago...<br>
+						  I didn't start testing my Perl code until about a decade ago...
+						  I didn't get into TDD until a couple years ago...
+						  I'm still not 100% TDD, there is a lot of temptation to be lazy about my code is great and powerful...
+						</aside>
+					</section>
+	
+					<section>
+						<h1>...the Moral?</h1>
+						<h2 class="fragment">Don't be like me</h2>
+						<aside class="notes">
+						</aside>
+					</section>
+	
+					
 				</section>
 				
-				<section data-state="bugged" data-background="images/flickr.com/bugged.jpg">
-					<h2 class="overlay-text">You can't prove the absence of bugs!</h2>
-					<aside class="notes">
-						You won't account for everything in a trivial program let alone a complex one.
-						Your tests themselves could have "bugs". But we as software engineers do seek to make our software as bug free as possible right?
-						So it's better to have a reduced risk of unknown bugs by testing your code than not having any tests at all.
-					</aside>
+				<!-- PROPAGANDA -->
+				<section>
+					<section data-state="cats" data-background="images/gratisography.com/cats.jpg">
+						<h1 class="overlay-text">Start testing now!</h1>
+						<aside class="notes">
+						</aside>
+					</section>
+
+					<section>
+						<h2>Why Testing?</h2>
+						<ul>
+							<li class="fragment">Reduce human error</li>
+							<li class="fragment">or gain a different perspective of how your code works.</li>
+							<li class="fragment">This could lead to structural improvements without changing code behavior.</li>
+							<li class="fragment">Plus you are building a suite of regression tests for feature development and future modifications.</li>
+							<li class="fragment">Thus improving your overall software quality!</li>
+						</ul>
+						<p class="fragment">There is a <span class="smaller">small</span> caveat...</p>
+						<aside class="notes">
+						</aside>
+					</section>
+					
+					<section data-state="bugged" data-background="images/flickr.com/bugged.jpg">
+						<h2 class="overlay-text">You can't prove the absence of bugs!</h2>
+						<aside class="notes">
+							You won't account for everything in a trivial program let alone a complex one.
+							Your tests themselves could have "bugs". But we as software engineers do seek to make our software as bug free as possible right?
+							So it's better to have a reduced risk of unknown bugs by testing your code than not having any tests at all.
+						</aside>
+					</section>
 				</section>
 				
-				<section data-state="torn_page" data-background="images/gratisography.com/torn_page.jpg">
-					<h1 class="overlay-text">What's this TDD thing?</h1>
-					<aside class="notes">
-						Test Driven Design
-					</aside>
-				</section>
-
+				<!-- TDD -->
 				<section>
-					<h3>It's pretty simple...</h3>
-					<img src="images/TDD_cycle.png" width="500" height="500" class="no-border">
-					<aside class="notes">
-					</aside>
-				</section>
-
-				<section>
-					<h3>...but here is a more formal description of the process.</h3>
-					<ol>
-						<li class="fragment">Add a test</li>
-						<li class="fragment">Run all tests and see if the new one fails</li>
-						<li class="fragment">Write some code</li>
-						<li class="fragment">Run tests</li>
-						<li class="fragment">Refactor code</li>
-						<li class="fragment">Repeat</li>
-					</ol>
-					<br><br>
-					<small class="fragment">http://en.wikipedia.org/wiki/Test-driven_development</small>
-					<aside class="notes">
-					</aside>
-				</section>
-
-				<section data-state="test_on_monitor" data-background="images/flickr.com/test_on_monitor.jpg">
-					<h1 class="overlay-text">Why TDD?</h1>
-					<aside class="notes">
-					</aside>
-				</section>
-
-				<section>
-					<h2>It's still just testing.</h2>
-					<ul class="fragment">
-						<li>Catch human errors</li>
-						<li>or gain a different perspective of how your code works.</li>
-						<li>This could lead to structural improvements without changing code behavior.</li>
-						<li>Plus you are building a suite of regression tests for feature development and future modifications.</li>
-						<li>Thus improving your overall software quality!</li>
-					</ul>
-					<p class="fragment">However...</p>
-					<aside class="notes">
-					</aside>
-				</section>
-
-				<section data-state="awesome_street" data-background="images/flickr.com/awesome_street.jpg">
-					<p class="overlay-text">
-						The <em>greatest benefit</em> of Test Drive Design...
-					</p>
-					<p class="overlay-text push-down fragment">
-						You are forced to think about the design of your software before implementing it.
-					</p>
-					<aside class="notes">
-					</aside>
-				</section>
-
-				<section>
-					<h1>Still not convinced?</h1>
-					<aside class="notes">
-					</aside>
-				</section>
-
-				<section data-state="stormtrooper" data-background="images/flickr.com/stormtrooper.jpg">
-					<h3 class="overlay-text push-down">No worries...</h3>
-					<aside class="notes">
-						Find a methodology that works for you. Just be sure to test your code to death and test it again after that. 
-					</aside>
-				</section>
-
-				<section>
-					<h3>However...</h3>
-					<p>...if you like the idea of Test Driven Design, you might also want to look into Behavior Driven Design.</p>
-					<aside class="notes">
-						That's beyond the scope of this talk. However I will mention one of the things I have been really liking from BDD, even though I may not be following that entire process. That is using three specific words to frame my tests: Given, When and Should
-					</aside>
+					<section data-state="torn_page" data-background="images/gratisography.com/torn_page.jpg">
+						<h1 class="overlay-text">What's this TDD thing?</h1>
+						<aside class="notes">
+							Test Driven Design
+						</aside>
+					</section>
+	
+					<section>
+						<h3>It's pretty simple...</h3>
+						<img src="images/TDD_cycle.png" width="500" height="500" class="no-border">
+						<aside class="notes">
+						</aside>
+					</section>
+	
+					<section>
+						<h3>...but here is a more formal description of the process.</h3>
+						<ol>
+							<li class="fragment">Add a test</li>
+							<li class="fragment">Run all tests and see if the new one fails</li>
+							<li class="fragment">Write some code</li>
+							<li class="fragment">Run tests</li>
+							<li class="fragment">Refactor code</li>
+							<li class="fragment">Repeat</li>
+						</ol>
+						<br><br>
+						<small class="fragment">http://en.wikipedia.org/wiki/Test-driven_development</small>
+						<aside class="notes">
+						</aside>
+					</section>
+	
+					<section data-state="test_on_monitor" data-background="images/flickr.com/test_on_monitor.jpg">
+						<h1 class="overlay-text">Why TDD?</h1>
+						<aside class="notes">
+						</aside>
+					</section>
+	
+					<section>
+						<h2>It's still just testing.</h2>
+						<ul class="fragment">
+							<li>Catch human errors</li>
+							<li>or gain a different perspective of how your code works.</li>
+							<li>This could lead to structural improvements without changing code behavior.</li>
+							<li>Plus you are building a suite of regression tests for feature development and future modifications.</li>
+							<li>Thus improving your overall software quality!</li>
+						</ul>
+						<p class="fragment">However...</p>
+						<aside class="notes">
+						</aside>
+					</section>
+	
+					<section data-state="awesome_street" data-background="images/flickr.com/awesome_street.jpg">
+						<p class="overlay-text">
+							The <em>greatest benefit</em> of Test Drive Design...
+						</p>
+						<p class="overlay-text push-down fragment">
+							You are forced to think about the design of your software before implementing it.
+						</p>
+						<aside class="notes">
+						</aside>
+					</section>
+	
+					<section>
+						<h1>Still not convinced?</h1>
+						<aside class="notes">
+						</aside>
+					</section>
+	
+					<section data-state="stormtrooper" data-background="images/flickr.com/stormtrooper.jpg">
+						<h3 class="overlay-text push-down">No worries...</h3>
+						<aside class="notes">
+							Find a methodology that works for you. Just be sure to test your code to death and test it again after that. 
+						</aside>
+					</section>
+	
+					<section>
+						<h3>However...</h3>
+						<p>...if you like the idea of Test Driven Design, you might also want to look into Behavior Driven Design.</p>
+						<aside class="notes">
+							That's beyond the scope of this talk. However I will mention one of the things I have been really liking from BDD, even though I may not be following that entire process. That is using three specific words to frame my tests: Given, When and Should
+						</aside>
+					</section>
 				</section>
 				
-				<section data-state="pure_gotham" data-background="images/flickr.com/pure_gotham.jpg">
-					<h1 class="overlay-text">Testing Architecture</h1>
-					<aside class="notes">
-					</aside>
-				</section>
-				
+				<!-- Testing Architecture -->
 				<section>
-					<h2>Overview</h2>
-					<div>
-						<p class="fragment indent-1">Test Runner - <em>prove</em></p>
-						<p class="fragment indent-2">&#8627; Test Harness - <em>TAP::Harness</em></p>
-						<p class="fragment indent-3">&#8627; Test Framework - <em>Test::More</em></p>
-						<p class="fragment indent-4">&#8627; Test Module(s) - <em>*.t files</em></p>
-						<p class="fragment indent-5">&#8627; Test Assertion(s) - <em>ok, cmp_ok, like, etc.</em></p>
-					</div>
-					<aside class="notes">
-					</aside>
-				</section>
-				
-				<section>
-					<h2>Test Runner</h2>
-					<p>Software utilizing some kind test harness to run your tests.</p>
-					<div class="fragment">
-						<p><em>prove</em> is a built-in test runner for Perl.</p>
-						<code>prove -v -Ilib t/</code>
-					</div>
-					<aside class="notes">
-					</aside>
-				</section>
-				
-				<section>
-					<h2>Test Harness</h2>
-					<p>Run a specified set of test modules (units) and report it's findings.</p>
-					<div class="fragment">
-						<p><em>TAP::Harness</em> is a built-in test harness for Perl.</p>
+					<section data-state="pure_gotham" data-background="images/flickr.com/pure_gotham.jpg">
+						<h1 class="overlay-text">Testing Architecture</h1>
+						<aside class="notes">
+						</aside>
+					</section>
+					
+					<section>
+						<h2>Overview</h2>
+						<div>
+							<p class="fragment indent-1">Test Runner - <em>prove</em></p>
+							<p class="fragment indent-2">&#8627; Test Harness - <em>TAP::Harness</em></p>
+							<p class="fragment indent-3">&#8627; Test Framework - <em>Test::More</em></p>
+							<p class="fragment indent-4">&#8627; Test Module(s) - <em>*.t files</em></p>
+							<p class="fragment indent-5">&#8627; Test Assertion(s) - <em>ok, cmp_ok, like, etc.</em></p>
+						</div>
+						<aside class="notes">
+						</aside>
+					</section>
+					
+					<section>
+						<h2>Test Runner</h2>
+						<p>Software utilizing some kind test harness to run your tests.</p>
+						<div class="fragment">
+							<p><em>prove</em> is a built-in test runner for Perl.</p>
+							<code>prove -v -Ilib t/</code>
+						</div>
+						<aside class="notes">
+						</aside>
+					</section>
+					
+					<section>
+						<h2>Test Harness</h2>
+						<p>Run a specified set of test modules (units) and report it's findings.</p>
+						<div class="fragment">
+							<p><em>TAP::Harness</em> is a built-in test harness for Perl.</p>
 <pre><code data-trim>
 #!/usr/bin/env perl
 
@@ -228,16 +241,16 @@ my $harness = TAP::Harness->new({
 });
 
 $harness->runtests(@ARGV);</code></pre>
-					</div>
-					<aside class="notes">
-						Though originally it was called Test::Harness. There is still a Test::Harness module for backwards compatibility, it just uses TAP::Harness.
-					</aside>
-				</section>
-				
-				<section>
-					<h2>Test Framework</h2>
-					<p>A set of functions that check some result/aspect of a code statement and declares whether or not it is ok. The test harness listens for these declarations.</p>
-					<div class="fragment">
+						</div>
+						<aside class="notes">
+							Though originally it was called Test::Harness. There is still a Test::Harness module for backwards compatibility, it just uses TAP::Harness.
+						</aside>
+					</section>
+					
+					<section>
+						<h2>Test Framework</h2>
+						<p>A set of functions that check some result/aspect of a code statement and declares whether or not it is ok. The test harness listens for these declarations.</p>
+						<div class="fragment">
 <pre><code data-trim>
 use Test::Simple;
 
@@ -246,13 +259,13 @@ use Test::More;
 use Test::Data;
 
 use Test::Deep;</code></pre>
-					</div>
-				</section>
-				
-				<section>
-					<h2>Test Module</h2>
-					<p>A file, utilizing a test framework, containing a series of tests to run.</p>
-					<div class="fragment">
+						</div>
+					</section>
+					
+					<section>
+						<h2>Test Module</h2>
+						<p>A file, utilizing a test framework, containing a series of tests to run.</p>
+						<div class="fragment">
 <pre><code data-trim>
 use strict;
 use warnings;
@@ -264,74 +277,76 @@ sub life_the_universe_and_everything() { 42 }
 ok( life_the_universe_and_everything() == 42 );
 
 done_testing();</code></pre>
-					</div>
-				</section>
-				
-				<section>
-					<h2>Test Assertion</h2>
-					<p>A test for some aspect of the software usually related to the test modules' overall purpose.</p>
-					<div class="fragment">
+						</div>
+					</section>
+					
+					<section>
+						<h2>Test Assertion</h2>
+						<p>A test for some aspect of the software usually related to the test modules' overall purpose.</p>
+						<div class="fragment">
 <pre><code data-trim>
 # snippet
 ok( life_the_universe_and_everything() == 42 );</code></pre>
-					</div>
+						</div>
+					</section>
 				</section>
 				
-				
-				<section data-state="test_tubes" data-background="images/flickr.com/test_tubes.jpg">
-					<h1 class="overlay-text">TAP</h1>
-					<aside class="notes">
-						Test Anything Protocol
-					</aside>
-				</section>
-				
+				<!-- TAP -->
 				<section>
-					<h2>What is it?</h2>
-					<p>A simple text-based output format for communicating the outcome of tests from test modules executed, for display purposes, by a test harness.</p>
-					<aside class="notes">
-						Long-winded definition
-					</aside>
-				</section>
-				
-				<section data-state="sidewalk_closed" data-background="images/flickr.com/sidewalk_closed.jpg">
-					<h1 class="overlay-text">Huh?</h1>
-					<aside class="notes">
-					</aside>
-				</section>
-				
-				<section data-state="elmers_glue" data-background="images/flickr.com/elmers_glue.jpg">
-					<h3 class="overlay-text">TAP is the glue between a test framework and test harness</h3>
-					<aside class="notes">
-					</aside>
-				</section>
-				
-				<section>
-					<h2>Cool things about TAP</h2>
-					<ul>
-						<li class="fragment">It's been around a while... since 1988!</li>
-						<li class="fragment">While it started in Perl, it is now implemented in many other languages such as C, C++, Erlang, Javascript, PHP, Python and Ruby.</li>
-						<li class="fragment">It has it's own EBNF Grammar. ( TAP::Parser::Grammar )</em></li>
-						<li class="fragment">It's still evolving. ( https://github.com/TestAnything )</li>
-					</ul>
-					<aside class="notes">
-						They are currently working on version 14.
-					</aside>
-				</section>
-				
-				<section>
-					<h2>Sample 1</h2>
-					<h3>Things are good!</h3>
+					<section data-state="test_tubes" data-background="images/flickr.com/test_tubes.jpg">
+						<h1 class="overlay-text">TAP</h1>
+						<aside class="notes">
+							Test Anything Protocol
+						</aside>
+					</section>
+					
+					<section>
+						<h2>What is it?</h2>
+						<p>A simple text-based output format for communicating the outcome of tests from test modules executed, for display purposes, by a test harness.</p>
+						<aside class="notes">
+							Long-winded definition
+						</aside>
+					</section>
+					
+					<section data-state="sidewalk_closed" data-background="images/flickr.com/sidewalk_closed.jpg">
+						<h1 class="overlay-text">Huh?</h1>
+						<aside class="notes">
+						</aside>
+					</section>
+					
+					<section data-state="elmers_glue" data-background="images/flickr.com/elmers_glue.jpg">
+						<h3 class="overlay-text">TAP is the glue between a test framework and test harness</h3>
+						<aside class="notes">
+						</aside>
+					</section>
+					
+					<section>
+						<h2>Cool things about TAP</h2>
+						<ul>
+							<li class="fragment">It's been around a while... since 1988!</li>
+							<li class="fragment">While it started in Perl, it is now implemented in many other languages such as C, C++, Erlang, Javascript, PHP, Python and Ruby.</li>
+							<li class="fragment">It has it's own EBNF Grammar. ( TAP::Parser::Grammar )</em></li>
+							<li class="fragment">It's still evolving. ( https://github.com/TestAnything )</li>
+						</ul>
+						<aside class="notes">
+							They are currently working on version 14.
+						</aside>
+					</section>
+					
+					<section>
+						<h2>Sample 1</h2>
+						<h3>Things are good!</h3>
 <pre><code data-trim>
 ok 1 - Result is a SCALAR and not a reference
 ok 2 - JSON decoded back to hash correctly
 1..2</code></pre>
-					<aside class="notes">
-					</aside>
-				</section>
-				
-				<section>
-					<h2>Sample 2</h2>
-					<h3>Things didn't go as smoothly :(</h3>
+						<aside class="notes">
+						</aside>
+					</section>
+					
+					<section>
+						<h2>Sample 2</h2>
+						<h3>Things didn't go as smoothly :(</h3>
 <pre><code data-trim>
 ok 1 - Result is a SCALAR and not a reference
 not ok 2 - JSON decoded back to hash correctly
@@ -342,20 +357,20 @@ not ok 2 - JSON decoded back to hash correctly
 #     $expected->{plan} = ARRAY(0x7fa71b0b36e8)
 1..2
 # Looks like you failed 1 test of 2.</code></pre>
-					<p class="fragment">If you are following TDD practices you will see <em>not ok</em> a lot.</p>
-					<aside class="notes">
-					</aside>
-				</section>
-				
-				<section>
-					<h3>So what does the test harness show?</h3>
-					<aside class="notes">
-						Normally you don't see that, though as that the Test Harness would grab that output parse it and use it in it's own output.
-					</aside>
-				</section>
-				
-				<section>
-					<h2>Sample 1</h2>
+						<p class="fragment">If you are following TDD practices you will see <em>not ok</em> a lot.</p>
+						<aside class="notes">
+						</aside>
+					</section>
+					
+					<section>
+						<h3>So what does the test harness show?</h3>
+						<aside class="notes">
+							Normally you don't see that, though as that the Test Harness would grab that output parse it and use it in it's own output.
+						</aside>
+					</section>
+					
+					<section>
+						<h2>Sample 1</h2>
 <pre><code data-trim>
 t/when_viewing_response_as_json.t ..
 ok 1 - Result is a SCALAR and not a reference
@@ -365,12 +380,12 @@ ok
 All tests successful.
 Files=1, Tests=2,  0 wallclock secs ( 0.03 usr  0.01 sys +  0.06 cusr  0.01 csys =  0.11 CPU)
 Result: PASS</code></pre>
-					<aside class="notes">
-					</aside>
-				</section>
-				
-				<section>
-					<h2>Sample 2</h2>
+						<aside class="notes">
+						</aside>
+					</section>
+					
+					<section>
+						<h2>Sample 2</h2>
 <pre><code data-trim>
 t/when_viewing_response_as_json.t ..
 ok 1 - Result is a SCALAR and not a reference
@@ -393,15 +408,15 @@ t/when_viewing_response_as_json.t (Wstat: 256 Tests: 2 Failed: 1)
   Non-zero exit status: 1
 Files=1, Tests=2,  0 wallclock secs ( 0.02 usr  0.01 sys +  0.06 cusr  0.01 csys =  0.10 CPU)
 Result: FAIL</code></pre>
-					<aside class="notes">
-					</aside>
-				</section>
+						<aside class="notes">
+						</aside>
+					</section>
 				
-				<section>
-					<h2>CPAN Modules</h2>
-					<pre><code data-trim>cpan -i &lt;module&gt;</code></pre>
-					<div class="fragment">
-						<p>Idealy modules have great test coverage and when you install one you will see TAP output interpretted by a test harness.</p>
+					<section>
+						<h2>CPAN Modules</h2>
+						<pre><code data-trim>cpan -i &lt;module&gt;</code></pre>
+						<div class="fragment">
+							<p>Idealy modules have great test coverage and when you install one you will see TAP output interpretted by a test harness.</p>
 <pre><code data-trim>
 Running make test
 PERL_DL_NONLAZY=1 /usr/bin/perl "-MExtUtils::Command::MM" "-e" "test_harness(0, 'blib/lib', 'blib/arch')" t/*.t
@@ -411,58 +426,62 @@ Files=1, Tests=1,  0 wallclock secs ( 0.02 usr  0.01 sys +  0.01 cusr  0.00 csys
 Result: PASS
   MDMONSEN/Acme-Travigator-0.005.tar.gz
   /usr/bin/make test -- OK</code></pre>
-					</div>
-					<aside class="notes">
-					</aside>
+						</div>
+						<aside class="notes">
+						</aside>
+					</section>
+					
+					<section>
+						<h2>CPAN Modules</h2>
+						<p>Then if it succeeds you get your module installed, otherwise you force it to install, right?</p>
+						<pre><code data-trim>cpan -if &lt;module&gt;</code></pre>
+						<aside class="notes">
+							I put if there on purpose, because if it installs then you are lucky.
+						</aside>
+					</section>
+					
+					<section>
+						<h2>CPAN Modules</h2>
+						<p>It is likely a better idea to read what the tests are reporting and try to resolve the failure.</p>
+					</section>
+					
+					<section data-state="car_crash" data-background="images/flickr.com/car_crash.jpg">
+						<h3 class="overlay-text push-down-sm">
+							<p class="indent-1">
+								1..1<br>
+								not ok 1 - Cars slowed down
+							</p>
+						</h3>
+						<aside class="notes">
+							After all we wouldn't want something bad happening.
+						</aside>
+					</section>
 				</section>
 				
+				<!-- Test::More -->
 				<section>
-					<h2>CPAN Modules</h2>
-					<p>Then if it succeeds you get your module installed, otherwise you force it to install, right?</p>
-					<pre><code data-trim>cpan -if &lt;module&gt;</code></pre>
-					<aside class="notes">
-						I put if there on purpose, because if it installs then you are lucky.
-					</aside>
-				</section>
-				
-				<section>
-					<h2>CPAN Modules</h2>
-					<p>It is likely a better idea to read what the tests are reporting and try to resolve the failure.</p>
-				</section>
-				
-				<section data-state="car_crash" data-background="images/flickr.com/car_crash.jpg">
-					<h3 class="overlay-text push-down-sm">
-						<p class="indent-1">
-							1..1<br>
-							not ok 1 - Cars slowed down
-						</p>
-					</h3>
-					<aside class="notes">
-						After all we wouldn't want something bad happening.
-					</aside>
-				</section>
-				
-				<section data-state="domo" data-background="images/flickr.com/domo.jpg">
-					<h2 class="overlay-text push-down-xsm">Test::More</h2>
-					<aside class="notes">
-					</aside>
-				</section>
-				
-				<section>
-					<h2>Cool things about Test::More</h2>
-					<ul>
-						<li class="fragment">"Standard" test framework for Perl.</li>
-						<li class="fragment">14 years old and well maintained.</li>
-						<li class="fragment">In fact it's going through a big refactor right now.</li>
-					</ul>
-					<aside class="notes">
-						What is truly standard in Perl when Tim Toady (TIMTOWTDI)?
-						Chad "Exodist" Granum - will be at YAPC::NA talking about those changes in fact. (http://www.yapcna.org/yn2015/talk/5937)
-					</aside>
-				</section>
-				
-				<section>
-					<h2>Overview</h2>
+					<section data-state="domo" data-background="images/flickr.com/domo.jpg">
+						<h1 class="overlay-text push-down-xxsm">Test::More</h1>
+						<aside class="notes">
+						</aside>
+					</section>
+					
+					<section>
+						<h2>Cool things about Test::More</h2>
+						<ul>
+							<li class="fragment">metacpan.org/pod/Test::More</li>
+							<li class="fragment">"Standard" test framework for Perl.</li>
+							<li class="fragment">14 years old and well maintained.</li>
+							<li class="fragment">In fact it's going through a big refactor right now.</li>
+						</ul>
+						<aside class="notes">
+							What is truly standard in Perl when Tim Toady (TIMTOWTDI)?
+							Chad "Exodist" Granum - will be at YAPC::NA talking about those changes in fact. (http://www.yapcna.org/yn2015/talk/5937)
+						</aside>
+					</section>
+					
+					<section>
+						<h2>Overview</h2>
 <pre><code data-trim>
 use Test::More test => 4;
 
@@ -482,12 +501,12 @@ SKIP: {
 
 done_testing();
 </code></pre>
-					<aside class="notes">
-					</aside>
-				</section>
-				
-				<section>
-					<h2>What's the plan?</h2>
+						<aside class="notes">
+						</aside>
+					</section>
+					
+					<section>
+						<h2>What's the plan?</h2>
 <pre><code data-trim>
 use Test::More tests => 42;
 
@@ -507,13 +526,13 @@ use Test::More;
 
 plan scalar @test_list;
 </code></pre>
-					<aside class="notes">
-						Remember TAP output needs to display the number of tests being run before or after the test output. So a plan is needed. Your output will tell you when you forget to provide a plan, or if you don't provide the correct number of tests.
-					</aside>
-				</section>
-				
-				<section>
-					<h2>Data Assertions</h2>
+						<aside class="notes">
+							Remember TAP output needs to display the number of tests being run before or after the test output. So a plan is needed. Your output will tell you when you forget to provide a plan, or if you don't provide the correct number of tests.
+						</aside>
+					</section>
+					
+					<section>
+						<h2>Data Assertions</h2>
 <pre><code data-trim>
 ok( $got, $test_name );
 
@@ -527,12 +546,12 @@ unlike( $got, qr/expected/, $test_name );
 
 cmp_ok( $got, $op, $expected, $test_name );
 </code></pre>
-					<aside class="notes">
-					</aside>
-				</section>
-				
-				<section>
-					<h2>More Data Assertions</h2>
+						<aside class="notes">
+						</aside>
+					</section>
+					
+					<section>
+						<h2>More Data Assertions</h2>
 <pre><code data-trim>
 can_ok( $module, @methods );
 
@@ -544,44 +563,46 @@ pass( $test_name );
 
 fail( $test_name );
 </code></pre>
-					<aside class="notes">
-					</aside>
-				</section>
-				
-				<section>
-					<h2>Testing Modules</h2>
+						<aside class="notes">
+						</aside>
+					</section>
+					
+					<section>
+						<h2>Testing Modules</h2>
 <pre><code data-trim>
 BEGIN { use_ok( $module ); }
 
 require_ok( $module );
 </code></pre>
-					<aside class="notes">
-						It's recommended that you run use_ok() inside a BEGIN block so its functions are exported at compile-time and prototypes are properly honored.
-					</aside>
-				</section>
-				
-				<section>
-					<h2>What about Data Structures?</h2>
+						<aside class="notes">
+							It's recommended that you run use_ok() inside a BEGIN block so its functions are exported at compile-time and prototypes are properly honored.
+						</aside>
+					</section>
+					
+					<section>
+						<h2>What about Data Structures?</h2>
 <pre><code data-trim>
 is_deeply( $got, $expected, $test_name );
 </code></pre>
-					<aside class="notes">
-						is_deeply() compares the dereferenced values of references, the references themselves (except for their type) are ignored. This means aspects such as blessing and ties are not considered "different".
-
-						is_deeply() currently has very limited handling of function reference and globs. It merely checks if they have the same referent. This may improve in the future.
-					</aside>
-				</section>
-				
-				<section>
-					<h2>Want more tests for Data::Structures?</h2>
-					<p>Look into <strong>Test::Deep</strong> or <strong>Test::Differences</strong></p>
-					<aside class="notes">
-						It's beyond the scope of this talk but there are other modules with more assertions related to Data Structures.
-					</aside>
-				</section>
-				
-				<section>
-					<h2>Diagnostic messages</h2>
+						<aside class="notes">
+							is_deeply() compares the dereferenced values of references, the references themselves (except for their type) are ignored. This means aspects such as blessing and ties are not considered "different".
+	
+							is_deeply() currently has very limited handling of function reference and globs. It merely checks if they have the same referent. This may improve in the future.
+						</aside>
+					</section>
+					
+					<section data-state="more_cowbell" data-background="images/flickr.com/more_cowbell.jpg">
+						<div class="overlay-text push-up-lg">
+							<h2>Want more tests for Data::Structures?</h2>
+							<p>Look into <strong>Test::Deep</strong> or <strong>Test::Differences</strong></p>
+						</div>
+						<aside class="notes">
+							It's beyond the scope of this talk but there are other modules with more assertions related to Data Structures.
+						</aside>
+					</section>
+					
+					<section>
+						<h2>Diagnostic messages</h2>
 <pre><code data-trim>
 diag("I will display in the test harness output");
 
@@ -589,30 +610,135 @@ note("I won't display in the test harness output, just the TAP output");
 
 diag explain $hash; # use explain to 'print' the hash as output
 </code></pre>
-					<aside class="notes">
-					</aside>
+						<aside class="notes">
+						</aside>
+					</section>
+					
+					<section>
+						<h2>Conditional Tests</h2>
+<pre><code data-trim>
+SKIP: {
+	skip "skip message", 1 if $condition;
+	
+	ok(my_test(), "My test worked");
+}
+
+TODO: {
+	local $TODO = "I still haven't got this done yet" if $condition;
+	
+	ok(some_other_test(), "Some test worked");
+}
+</code></pre>
+						<aside class="notes">
+							If you follow TDD you likely won't be using TODO. However skip still has value. For example say you are writing a CPAN module and there are tests that you write for your development process but aren't necessary for installation.
+						</aside>
+					</section>
+					
+					<section>
+						<h2>Bailing Out</h2>
+<pre><code data-trim>
+BAIL_OUT("Stop the Presses!");
+</code></pre>
+						<aside class="notes">
+							Very useful for critical failure, like a third-party service connection or database connection...
+							
+							There is also Test::Most which gives more control over how you bail out.
+						</aside>
+					</section>
 				</section>
 				
+				<!-- Devel::Cover -->
 				<section>
-					<h2>Conditional Tests</h2>
-					<aside class="notes">
-						Skip and Todo
-					</aside>
+					<section data-state="space_invaders_blanket" data-background="images/flickr.com/space_invaders_blanket.jpg">
+						<h2 class="overlay-text push-down-xxsm">Let's give our tests... blankets?</h2>
+						<aside class="notes">
+							Devel::Cover
+						</aside>
+					</section>
+					
+					<section>
+						<h2>Devel::Cover</h2>
+						
+						<ul>
+							<li class="fragment">metacpan.org/pod/Devel::Cover</li>
+							<li class="fragment">Get coverage results on modules and/or programs.</li>
+							<li class="fragment">Very friendly with t/*.t test frameworks</li>
+						</ul>
+<pre class="fragment"><code data-trim>
+> cover -delete
+> HARNESS_PERL_SWITCHES=-MDevel::Cover make test
+> cover
+</code></pre>
+						<aside class="notes">
+							This is the set of commands I threw into a shell script so I could quickly get my test coverage. This is for a uninstalled module specifically.
+						</aside>
+					</section>
+					
+					<section>
+						<h2>Sample Coverage Summary</h2>
+<pre class="fragment"><code data-trim>
+------ ------ ------ ------ ------ ------ ------
+  stmt   bran   cond    sub    pod   time  total
+------ ------ ------ ------ ------ ------ ------
+  89.0   45.9   38.6  100.0  100.0   82.8   75.9
+  97.2   93.7   66.6   93.7  100.0   13.4   92.4
+  100.0    n/a    n/a  100.0    n/a    1.4  100.0
+  89.4   50.0   33.3   85.7  100.0    1.2   78.3
+  95.0   50.0    n/a  100.0  100.0    0.4   93.0
+  100.0   50.0    n/a  100.0  100.0    0.6   96.6
+  92.3   54.0   45.5   97.2  100.0  100.0   82.8
+------ ------ ------ ------ ------ ------ ------
+</code></pre>
+						<aside class="notes">
+							This is an example from a module I developed. You also will get a coverage summary HTML document That will show you line by line where you are missing coverage. I'm not going to display that in this talk.
+							Statement - A statement is covered if it is executed by at test. A statement is not necessarily one line of code.
+							Branches - A branch is covered if tests jump to all possiible destinations.
+							Conditions - A condition is covered all terms in the expression get used during testing.
+							Subroutines - A subroutine is covered if it is executed during testing.
+							POD - Does every subroutine have Pod documentation?
+							Time - Percentage of time spent on a file. There is a time value in the coverage summary also that indicates the time it took to execute a statement.
+							There are some things that just are possible to get coverage on, see Devel::Cover in metacpan for more details.
+							The bottom number is a average total for each column.
+						</aside>
+					</section>
 				</section>
 				
+				<!-- Application -->
 				<section>
-					<h2>Bailing Out</h2>
-					<aside class="notes">
-						BAIL_OUT
-					</aside>
+					<section data-state="application" data-background="images/flickr.com/application.jpg">
+						<h2 class="overlay-text push-down-xsm">Applying what we learned...</h2>
+						<aside class="notes">
+							Break down some common scenarios you are likely to run into...
+						</aside>
+					</section>
+					
+					<section>
+						<h2>Using an existing code base</h2>
+						<ul>
+							<li class="fragment">Have a best practice that everyone follows</li>
+							<li class="fragment">Ease into the testing.</li>
+							<li class="fragment">Create tests for all the new features.</li>
+							<li class="fragment">Bugs are a greate opportunity to add a test or two on the old stuff!</li>
+						</ul>
+						<aside class="notes">
+							Team or Solo this is good advice
+						</aside>
+					</section>
+					
+					<section>
+						<h2>Creating a new code base</h2>
+						<ul>
+							<li class="fragment">Free to "do things right" from the beginning</li>
+							<li class="fragment">Have a best practice for yourself to follow</li>
+							<li class="fragment">Following a test-first methodology can really win in this situation.</li>
+						</ul>
+						<aside class="notes">
+							Team or Solo this is good advice
+							A key to creating and maintaining a good suite of tests is Discipline
+						</aside>
+					</section>
 				</section>
 				
-				<section>
-					<h2>Learn by doing</h2>
-					<aside class="notes">
-						The project
-					</aside>
-				</section>
 				
 			</div>
 
@@ -630,11 +756,13 @@ diag explain $hash; # use explain to 'print' the hash as output
 			<div class="credit test_tubes" data-img="images/flickr.com/test_tubes.jpg">Photo: Proggie | flickr.com/photos/tym | cc-by-nc-nd</div>
 			<div class="credit sidewalk_closed" data-img="images/flickr.com/sidewalk_closed.jpg">Photo: Mr.TinDC | flickr.com/photos/mr_t_in_dc | cc-by-nd</div>
 			<div class="credit elmers_glue" data-img="images/flickr.com/elmers_glue.jpg">Photo: .imelda | flickr.com/photos/imelda | cc-by-nc-nd</div>
-			<div class="credit car_crash" data-img="images/flickr.com/car_crash.jpg">Photo: flickr.com | cc</div>
+			<div class="credit car_crash" data-img="images/flickr.com/car_crash.jpg">Photo: flickr.com | c</div>
 			<div class="credit domo" data-img="images/flickr.com/domo.jpg">Photo: Lou Bueno | flickr.com/photos/lab2112 | cc-by-nc-nd</div>
+			<div class="credit more_cowbell" data-img="images/flickr.com/more_cowbell.jpg">Photo: Danielle Scott | www.flickr.com/photos/danielle_scott | cc-by-sa</div>
+			<div class="credit space_invaders_blanket" data-img="images/flickr.com/space_invaders_blanket.jpg">Photo: Ana Petree Garcia | flickr.com/photos/iamduckydale | cc-by</div>
+			<div class="credit application" data-img="images/flickr.com/application.jpg">Photo: GotCredit | flickr.com/photos/jakerust | cc-by</div>
 		</div>
 
-		<script src="js/jquery-1.11.3.min.js"></script>
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 
@@ -660,20 +788,6 @@ diag explain $hash; # use explain to 'print' the hash as output
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
-			
-			Reveal.addEventListener( 'slidechanged', function( event ) {
-				// event.currentSlide, event.indexh, event.indexv
-				$(event.currentSlide).find('div.credit').each(function(){
-					var x = $('body').width() - $(this).height();
-					var y = $(this).offset().top;
-					var o = {
-						top: y,
-						left: x
-					};
-					console.log(o);
-					//$(this).offset(o);
-				});
-			} );	
 
 		</script>
 
