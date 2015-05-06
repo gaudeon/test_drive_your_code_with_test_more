@@ -51,7 +51,7 @@
 					</aside>
                 </section>
 
-                <section data-background="images/raumrot.com/notebook.jpg">
+                <section data-state="notebook" data-background="images/raumrot.com/notebook.jpg">
                     <h1 class="overlay-text">Story...</h1>
                     <aside class="notes">
                       I first got into Perl 20 years ago...<br>
@@ -59,7 +59,6 @@
                       I didn't get into TDD until a couple years ago...
                       I'm still not 100% TDD, there is a lot of temptation to be lazy about my code is great and powerful...
                     </aside>
-					<div class="credit">Photo: Markus Spiske | raumrot.com | cc-by</div>
                 </section>
 
 				<section>
@@ -69,11 +68,10 @@
 					</aside>
 				</section>
 
-				<section data-background="images/gratisography.com/cats.jpg">
+				<section data-state="cats" data-background="images/gratisography.com/cats.jpg">
 					<h1 class="overlay-text">Start testing now!</h1>
 					<aside class="notes">
 					</aside>
-					<div class="credit">Photo: Ryan McGuire | gratisography.com | cc-zero</div>
 				</section>
 
 				<section>
@@ -90,22 +88,20 @@
 					</aside>
 				</section>
 				
-				<section data-background="images/flickr.com/bugged.jpg">
+				<section data-state="bugged" data-background="images/flickr.com/bugged.jpg">
 					<h2 class="overlay-text">You can't prove the absence of bugs!</h2>
 					<aside class="notes">
 						You won't account for everything in a trivial program let alone a complex one.
 						Your tests themselves could have "bugs". But we as software engineers do seek to make our software as bug free as possible right?
 						So it's better to have a reduced risk of unknown bugs by testing your code than not having any tests at all.
 					</aside>
-					<div class="credit">Photo: Oℓivia | flickr.com/photos/kjellander | cc-by-nc-sa </div>
 				</section>
 				
-				<section data-background="images/gratisography.com/torn_page.jpg">
+				<section data-state="torn_page" data-background="images/gratisography.com/torn_page.jpg">
 					<h1 class="overlay-text">What's this TDD thing?</h1>
 					<aside class="notes">
 						Test Driven Design
 					</aside>
-					<div class="credit">Photo: Ryan McGuire | gratisography.com | cc-zero</div>
 				</section>
 
 				<section>
@@ -131,11 +127,10 @@
 					</aside>
 				</section>
 
-				<section data-background="images/flickr.com/test_on_monitor.jpg">
+				<section data-state="test_on_monitor" data-background="images/flickr.com/test_on_monitor.jpg">
 					<h1 class="overlay-text">Why TDD?</h1>
 					<aside class="notes">
 					</aside>
-					<div class="credit">Photo: Lachlan Hardy | flickr.com/photos/lachlanhardy | cc-by</div>
 				</section>
 
 				<section>
@@ -152,7 +147,7 @@
 					</aside>
 				</section>
 
-				<section data-background="images/flickr.com/awesome_street.jpg">
+				<section data-state="awesome_street" data-background="images/flickr.com/awesome_street.jpg">
 					<p class="overlay-text">
 						The <em>greatest benefit</em> of Test Drive Design...
 					</p>
@@ -161,7 +156,6 @@
 					</p>
 					<aside class="notes">
 					</aside>
-					<div class="credit">Photo: Selena N. B. H. | flickr.com/photos/moonlightbulb | cc-by</div>
 				</section>
 
 				<section>
@@ -170,12 +164,11 @@
 					</aside>
 				</section>
 
-				<section data-state="full-size" data-background="images/flickr.com/stormtrooper.jpg">
+				<section data-state="stormtrooper" data-background="images/flickr.com/stormtrooper.jpg">
 					<h3 class="overlay-text push-down">No worries...</h3>
 					<aside class="notes">
 						Find a methodology that works for you. Just be sure to test your code to death and test it again after that. 
 					</aside>
-					<div class="credit">Photo: Jason Ternus | flickr.com/photos/27271711@N04 | cc-by-nc</div>
 				</section>
 
 				<section>
@@ -186,21 +179,20 @@
 					</aside>
 				</section>
 				
-				<section data-background="images/flickr.com/pure_gotham.jpg">
+				<section data-state="pure_gotham" data-background="images/flickr.com/pure_gotham.jpg">
 					<h1 class="overlay-text">Testing Architecture</h1>
 					<aside class="notes">
 					</aside>
-					<div class="credit">Photo: Justin Kern | flickr.com/photos/justinwkern | cc-by-nc-nd</div>
 				</section>
 				
 				<section>
 					<h2>Overview</h2>
 					<div>
-						<p class="fragment indent-1">Test Runner</p>
-						<p class="fragment indent-2">&#8627; Test Harness</p>
-						<p class="fragment indent-3">&#8627; Test Framework</p>
-						<p class="fragment indent-4">&#8627; Test Module(s)</p>
-						<p class="fragment indent-5">&#8627; Test Assertion(s)</p>
+						<p class="fragment indent-1">Test Runner - <em>prove</em></p>
+						<p class="fragment indent-2">&#8627; Test Harness - <em>TAP::Harness</em></p>
+						<p class="fragment indent-3">&#8627; Test Framework - <em>Test::More</em></p>
+						<p class="fragment indent-4">&#8627; Test Module(s) - <em>*.t files</em></p>
+						<p class="fragment indent-5">&#8627; Test Assertion(s) - <em>ok, cmp_ok, like, etc.</em></p>
 					</div>
 					<aside class="notes">
 					</aside>
@@ -222,7 +214,7 @@
 					<p>Run a specified set of test modules (units) and report it's findings.</p>
 					<div class="fragment">
 						<p><em>TAP::Harness</em> is a built-in test harness for Perl.</p>
-						<pre>
+<pre><code data-trim>
 #!/usr/bin/env perl
 
 use strict;
@@ -235,7 +227,7 @@ my $harness = TAP::Harness->new({
 	lib       => [ 'lib' ],
 });
 
-$harness->runtests(@ARGV);</pre>
+$harness->runtests(@ARGV);</code></pre>
 					</div>
 					<aside class="notes">
 						Though originally it was called Test::Harness. There is still a Test::Harness module for backwards compatibility, it just uses TAP::Harness.
@@ -246,14 +238,14 @@ $harness->runtests(@ARGV);</pre>
 					<h2>Test Framework</h2>
 					<p>A set of functions that check some result/aspect of a code statement and declares whether or not it is ok. The test harness listens for these declarations.</p>
 					<div class="fragment">
-<pre>
+<pre><code data-trim>
 use Test::Simple;
 
 use Test::More;
 
 use Test::Data;
 
-use Test::Deep;</pre>
+use Test::Deep;</code></pre>
 					</div>
 				</section>
 				
@@ -261,7 +253,7 @@ use Test::Deep;</pre>
 					<h2>Test Module</h2>
 					<p>A file, utilizing a test framework, containing a series of tests to run.</p>
 					<div class="fragment">
-<pre>
+<pre><code data-trim>
 use strict;
 use warnings;
 
@@ -271,7 +263,7 @@ sub life_the_universe_and_everything() { 42 }
 
 ok( life_the_universe_and_everything() == 42 );
 
-done_testing();</pre>
+done_testing();</code></pre>
 					</div>
 				</section>
 				
@@ -279,19 +271,18 @@ done_testing();</pre>
 					<h2>Test Assertion</h2>
 					<p>A test for some aspect of the software usually related to the test modules' overall purpose.</p>
 					<div class="fragment">
-<pre>
+<pre><code data-trim>
 # snippet
-ok( life_the_universe_and_everything() == 42 );</pre>
+ok( life_the_universe_and_everything() == 42 );</code></pre>
 					</div>
 				</section>
 				
 				
-				<section data-background="images/flickr.com/test_tubes.jpg">
+				<section data-state="test_tubes" data-background="images/flickr.com/test_tubes.jpg">
 					<h1 class="overlay-text">TAP</h1>
 					<aside class="notes">
 						Test Anything Protocol
 					</aside>
-					<div class="credit">Photo: Proggie | flickr.com/photos/tym | cc-by-nc-nd</div>
 				</section>
 				
 				<section>
@@ -302,18 +293,16 @@ ok( life_the_universe_and_everything() == 42 );</pre>
 					</aside>
 				</section>
 				
-				<section data-background="images/flickr.com/sidewalk_closed.jpg">
+				<section data-state="sidewalk_closed" data-background="images/flickr.com/sidewalk_closed.jpg">
 					<h1 class="overlay-text">Huh?</h1>
 					<aside class="notes">
 					</aside>
-					<div class="credit">Photo: Mr.TinDC | flickr.com/photos/mr_t_in_dc | cc-by-nd</div>
 				</section>
 				
-				<section data-background="images/flickr.com/elmers_glue.jpg">
+				<section data-state="elmers_glue" data-background="images/flickr.com/elmers_glue.jpg">
 					<h3 class="overlay-text">TAP is the glue between a test framework and test harness</h3>
 					<aside class="notes">
 					</aside>
-					<div class="credit">Photo: .imelda | flickr.com/photos/imelda | cc-by-nc-nd</div>
 				</section>
 				
 				<section>
@@ -332,10 +321,10 @@ ok( life_the_universe_and_everything() == 42 );</pre>
 				<section>
 					<h2>Sample 1</h2>
 					<h3>Things are good!</h3>
-<pre>
+<pre><code data-trim>
 ok 1 - Result is a SCALAR and not a reference
 ok 2 - JSON decoded back to hash correctly
-1..2</pre>
+1..2</code></pre>
 					<aside class="notes">
 					</aside>
 				</section>
@@ -343,7 +332,7 @@ ok 2 - JSON decoded back to hash correctly
 				<section>
 					<h2>Sample 2</h2>
 					<h3>Things didn't go as smoothly :(</h3>
-<pre>
+<pre><code data-trim>
 ok 1 - Result is a SCALAR and not a reference
 not ok 2 - JSON decoded back to hash correctly
 #   Failed test 'JSON decoded back to hash correctly'
@@ -352,7 +341,7 @@ not ok 2 - JSON decoded back to hash correctly
 #          $got->{plan} = Does not exist
 #     $expected->{plan} = ARRAY(0x7fa71b0b36e8)
 1..2
-# Looks like you failed 1 test of 2.</pre>
+# Looks like you failed 1 test of 2.</code></pre>
 					<p class="fragment">If you are following TDD practices you will see <em>not ok</em> a lot.</p>
 					<aside class="notes">
 					</aside>
@@ -367,7 +356,7 @@ not ok 2 - JSON decoded back to hash correctly
 				
 				<section>
 					<h2>Sample 1</h2>
-<pre>
+<pre><code data-trim>
 t/when_viewing_response_as_json.t ..
 ok 1 - Result is a SCALAR and not a reference
 ok 2 - JSON decoded back to hash correctly
@@ -375,14 +364,14 @@ ok 2 - JSON decoded back to hash correctly
 ok
 All tests successful.
 Files=1, Tests=2,  0 wallclock secs ( 0.03 usr  0.01 sys +  0.06 cusr  0.01 csys =  0.11 CPU)
-Result: PASS</pre>
+Result: PASS</code></pre>
 					<aside class="notes">
 					</aside>
 				</section>
 				
 				<section>
 					<h2>Sample 2</h2>
-<pre>
+<pre><code data-trim>
 t/when_viewing_response_as_json.t ..
 ok 1 - Result is a SCALAR and not a reference
 not ok 2 - JSON decoded back to hash correctly
@@ -403,17 +392,17 @@ t/when_viewing_response_as_json.t (Wstat: 256 Tests: 2 Failed: 1)
   Failed test:  2
   Non-zero exit status: 1
 Files=1, Tests=2,  0 wallclock secs ( 0.02 usr  0.01 sys +  0.06 cusr  0.01 csys =  0.10 CPU)
-Result: FAIL</pre>
+Result: FAIL</code></pre>
 					<aside class="notes">
 					</aside>
 				</section>
 				
 				<section>
 					<h2>CPAN Modules</h2>
-					<pre>cpan -i &lt;module&gt;</pre>
+					<pre><code data-trim>cpan -i &lt;module&gt;</code></pre>
 					<div class="fragment">
 						<p>Idealy modules have great test coverage and when you install one you will see TAP output interpretted by a test harness.</p>
-<pre>
+<pre><code data-trim>
 Running make test
 PERL_DL_NONLAZY=1 /usr/bin/perl "-MExtUtils::Command::MM" "-e" "test_harness(0, 'blib/lib', 'blib/arch')" t/*.t
 t/test_travigator.t .. ok
@@ -421,7 +410,7 @@ All tests successful.
 Files=1, Tests=1,  0 wallclock secs ( 0.02 usr  0.01 sys +  0.01 cusr  0.00 csys =  0.04 CPU)
 Result: PASS
   MDMONSEN/Acme-Travigator-0.005.tar.gz
-  /usr/bin/make test -- OK</pre>
+  /usr/bin/make test -- OK</code></pre>
 					</div>
 					<aside class="notes">
 					</aside>
@@ -430,7 +419,7 @@ Result: PASS
 				<section>
 					<h2>CPAN Modules</h2>
 					<p>Then if it succeeds you get your module installed, otherwise you force it to install, right?</p>
-					<pre>cpan -if &lt;module&gt;</pre>
+					<pre><code data-trim>cpan -if &lt;module&gt;</code></pre>
 					<aside class="notes">
 						I put if there on purpose, because if it installs then you are lucky.
 					</aside>
@@ -441,7 +430,7 @@ Result: PASS
 					<p>It is likely a better idea to read what the tests are reporting and try to resolve the failure.</p>
 				</section>
 				
-				<section data-background="images/flickr.com/car_crash.jpg">
+				<section data-state="car_crash" data-background="images/flickr.com/car_crash.jpg">
 					<h3 class="overlay-text push-down-sm">
 						<p class="indent-1">
 							1..1<br>
@@ -451,21 +440,201 @@ Result: PASS
 					<aside class="notes">
 						After all we wouldn't want something bad happening.
 					</aside>
-					<div class="credit">Photo: flickr.com | cc</div>
+				</section>
+				
+				<section data-state="domo" data-background="images/flickr.com/domo.jpg">
+					<h2 class="overlay-text push-down-xsm">Test::More</h2>
+					<aside class="notes">
+					</aside>
 				</section>
 				
 				<section>
-					<h2>Test::More</h2>
+					<h2>Cool things about Test::More</h2>
+					<ul>
+						<li class="fragment">"Standard" test framework for Perl.</li>
+						<li class="fragment">14 years old and well maintained.</li>
+						<li class="fragment">In fact it's going through a big refactor right now.</li>
+					</ul>
+					<aside class="notes">
+						What is truly standard in Perl when Tim Toady (TIMTOWTDI)?
+						Chad "Exodist" Granum - will be at YAPC::NA talking about those changes in fact. (http://www.yapcna.org/yn2015/talk/5937)
+					</aside>
 				</section>
 				
 				<section>
-					<h2>Project</h2>
+					<h2>Overview</h2>
+<pre><code data-trim>
+use Test::More test => 4;
+
+ok(foo() == 1, "Foo ok");
+
+require_ok('CGI::Ex::App');
+
+is_deeply(get_hash(), { hello => 'OpenWest' }, "Hash returned");
+
+diag("I am a comment output in results");
+
+SKIP: {
+	"Not ready to do this test", 1 if skip_this();
+	
+	ok(test_something(), "Something ok");
+}
+
+done_testing();
+</code></pre>
+					<aside class="notes">
+					</aside>
+				</section>
+				
+				<section>
+					<h2>What's the plan?</h2>
+<pre><code data-trim>
+use Test::More tests => 42;
+
+# or
+
+use Test::More;
+
+done_testing(42);
+
+# or
+
+use Test::More skip_all => "reason";
+
+# or
+
+use Test::More;
+
+plan scalar @test_list;
+</code></pre>
+					<aside class="notes">
+						Remember TAP output needs to display the number of tests being run before or after the test output. So a plan is needed. Your output will tell you when you forget to provide a plan, or if you don't provide the correct number of tests.
+					</aside>
+				</section>
+				
+				<section>
+					<h2>Data Assertions</h2>
+<pre><code data-trim>
+ok( $got, $test_name );
+
+is( $got, $expected, $test_name );
+
+isnt( $got, $expected, $test_name );
+
+like( $got, qr/expected/, $test_name );
+
+unlike( $got, qr/expected/, $test_name );
+
+cmp_ok( $got, $op, $expected, $test_name );
+</code></pre>
+					<aside class="notes">
+					</aside>
+				</section>
+				
+				<section>
+					<h2>More Data Assertions</h2>
+<pre><code data-trim>
+can_ok( $module, @methods );
+
+isa_ok( $object, $class, $object_name );
+
+my $obj = new_ok( $class );
+
+pass( $test_name );
+
+fail( $test_name );
+</code></pre>
+					<aside class="notes">
+					</aside>
+				</section>
+				
+				<section>
+					<h2>Testing Modules</h2>
+<pre><code data-trim>
+BEGIN { use_ok( $module ); }
+
+require_ok( $module );
+</code></pre>
+					<aside class="notes">
+						It's recommended that you run use_ok() inside a BEGIN block so its functions are exported at compile-time and prototypes are properly honored.
+					</aside>
+				</section>
+				
+				<section>
+					<h2>What about Data Structures?</h2>
+<pre><code data-trim>
+is_deeply( $got, $expected, $test_name );
+</code></pre>
+					<aside class="notes">
+						is_deeply() compares the dereferenced values of references, the references themselves (except for their type) are ignored. This means aspects such as blessing and ties are not considered "different".
+
+						is_deeply() currently has very limited handling of function reference and globs. It merely checks if they have the same referent. This may improve in the future.
+					</aside>
+				</section>
+				
+				<section>
+					<h2>Want more tests for Data::Structures?</h2>
+					<p>Look into <strong>Test::Deep</strong> or <strong>Test::Differences</strong></p>
+					<aside class="notes">
+						It's beyond the scope of this talk but there are other modules with more assertions related to Data Structures.
+					</aside>
+				</section>
+				
+				<section>
+					<h2>Diagnostic messages</h2>
+<pre><code data-trim>
+diag("I will display in the test harness output");
+
+note("I won't display in the test harness output, just the TAP output");
+
+diag explain $hash; # use explain to 'print' the hash as output
+</code></pre>
+					<aside class="notes">
+					</aside>
+				</section>
+				
+				<section>
+					<h2>Conditional Tests</h2>
+					<aside class="notes">
+						Skip and Todo
+					</aside>
+				</section>
+				
+				<section>
+					<h2>Bailing Out</h2>
+					<aside class="notes">
+						BAIL_OUT
+					</aside>
+				</section>
+				
+				<section>
+					<h2>Learn by doing</h2>
+					<aside class="notes">
+						The project
+					</aside>
 				</section>
 				
 			</div>
 
 		</div>
+		
+		<div class="credits">
+			<div class="credit notebook" data-img="images/raumrot.com/notebook.jpg">Photo: Markus Spiske | raumrot.com | cc-by</div>
+			<div class="credit cats" data-img="images/gratisography.com/cats.jpg">Photo: Ryan McGuire | gratisography.com | cc-zero</div>
+			<div class="credit bugged" data-img="images/flickr.com/bugged.jpg">Photo: Oℓivia | flickr.com/photos/kjellander | cc-by-nc-sa </div>
+			<div class="credit torn_page" data-img="images/gratisography.com/torn_page.jpg">Photo: Ryan McGuire | gratisography.com | cc-zero</div>
+			<div class="credit test_on_monitor" data-img="images/flickr.com/test_on_monitor.jpg">Photo: Lachlan Hardy | flickr.com/photos/lachlanhardy | cc-by</div>
+			<div class="credit awesome_street" data-img="images/flickr.com/awesome_street.jpg">Photo: Selena N. B. H. | flickr.com/photos/moonlightbulb | cc-by</div>
+			<div class="credit stormtrooper" data-img="images/flickr.com/stormtrooper.jp">Photo: Jason Ternus | flickr.com/photos/27271711@N04 | cc-by-nc</div>
+			<div class="credit pure_gotham" data-img="images/flickr.com/pure_gotham.jpg">Photo: Justin Kern | flickr.com/photos/justinwkern | cc-by-nc-nd</div>
+			<div class="credit test_tubes" data-img="images/flickr.com/test_tubes.jpg">Photo: Proggie | flickr.com/photos/tym | cc-by-nc-nd</div>
+			<div class="credit sidewalk_closed" data-img="images/flickr.com/sidewalk_closed.jpg">Photo: Mr.TinDC | flickr.com/photos/mr_t_in_dc | cc-by-nd</div>
+			<div class="credit elmers_glue" data-img="images/flickr.com/elmers_glue.jpg">Photo: .imelda | flickr.com/photos/imelda | cc-by-nc-nd</div>
+			<div class="credit car_crash" data-img="images/flickr.com/car_crash.jpg">Photo: flickr.com | cc</div>
+			<div class="credit domo" data-img="images/flickr.com/domo.jpg">Photo: Lou Bueno | flickr.com/photos/lab2112 | cc-by-nc-nd</div>
+		</div>
 
+		<script src="js/jquery-1.11.3.min.js"></script>
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 
@@ -491,6 +660,20 @@ Result: PASS
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
+			
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+				// event.currentSlide, event.indexh, event.indexv
+				$(event.currentSlide).find('div.credit').each(function(){
+					var x = $('body').width() - $(this).height();
+					var y = $(this).offset().top;
+					var o = {
+						top: y,
+						left: x
+					};
+					console.log(o);
+					//$(this).offset(o);
+				});
+			} );	
 
 		</script>
 

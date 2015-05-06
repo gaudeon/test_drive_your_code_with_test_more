@@ -9,12 +9,12 @@
         div.credit {
             font-size: small;
             color: rgba(0,0,0,.8);
-            background-color: rgba(255,255,255,.3);
-            position: absolute;
+            background-color: rgba(255,255,255,.6);
             width: 100%;
-            transform: rotate(-90deg);
-            left: 51em;
+/*            transform: rotate(-90deg);
+            position: absolute;
             top: 50%;
+            left:78%;*/
         }
     }
 
@@ -30,6 +30,10 @@
         
         &.push-down-sm {
             margin-top: 8em;
+        }
+        
+        &.push-down-xsm {
+            margin-top: 5em;
         }
 
         &.push-up {
@@ -61,5 +65,25 @@
     }
 }
 
+.credits {
+    .credit {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: small;
+        color: rgba(0,0,0,.8);
+        background-color: rgba(255,255,255,.6);
+        width: 100%;
+        text-align: right;
+        padding: .1em;
+    }
+}
 
-
+@each $credit in (notebook, cats, bugged, torn_page, test_on_monitor,
+                  awesome_street, stormtrooper, pure_gotham, test_tubes,
+                  sidewalk_closed, elmers_glue, car_crash, domo) {
+    .#{$credit} .credit.#{$credit} {
+        display: block;
+    }
+}
