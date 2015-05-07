@@ -551,6 +551,66 @@ cmp_ok( $got, $op, $expected, $test_name );
 					</section>
 					
 					<section>
+						<h3>ok( $got, $test_name );</h3>
+<pre><code data-trim>
+ok(0, 'ok');
+
+not ok 1 - ok
+#   Failed test 'ok'
+#   at ./test.pl line 9.
+</code></pre>
+						<aside class="notes">
+						</aside>
+					</section>
+					
+					<section>
+						<h3>is( $got, $expected, $test_name );</h3>
+<pre><code data-trim>
+is('something else', 'is it working?', 'is it working?');
+
+not ok 1 - is it working?
+#   Failed test 'is it working?'
+#   at ./test.pl line 9.
+#          got: 'something else'
+#     expected: 'is it working?'
+</code></pre>
+						<aside class="notes">
+							isnt test works like is test but in reverse
+						</aside>
+					</section>
+					
+					<section>
+						<h3>like( $got, qr/expected/, $test_name );</h3>
+<pre><code data-trim>
+like('you should test less', qr/you should test more/, 'you should test more');
+
+not ok 1 - you should test more
+#   Failed test 'you should test more'
+#   at ./test.pl line 8.
+#                   'you should test less'
+#     doesn't match '(?^:you should test more)'
+</code></pre>
+						<aside class="notes">
+							unlike test works similar to like test but in reverse
+						</aside>
+					</section>
+					
+					<section>
+						<h3>cmp_ok( $got, $op, $expected, $test_name );</h3>
+<pre><code data-trim>
+cmp_ok( 3.14159, '==', 1.618, 'is it golden?' );
+
+not ok 1 - is it golden?
+#   Failed test 'is it golden?'
+#   at ./test.pl line 8.
+#          got: 3.14159
+#     expected: 1.618
+</code></pre>
+						<aside class="notes">
+						</aside>
+					</section>
+					
+					<section>
 						<h2>More Data Assertions</h2>
 <pre><code data-trim>
 can_ok( $module, @methods );
@@ -568,11 +628,71 @@ fail( $test_name );
 					</section>
 					
 					<section>
+						<h3>can_ok( $module, @methods );</h3>
+<pre><code data-trim>
+can_ok('TestModule', 'get_stuff');
+
+not ok 1 - TestModule->can('get_stuff')
+#   Failed test 'TestModule->can('get_stuff')'
+#   at ./test.pl line 8.
+#     TestModule->can('get_stuff') failed
+</code></pre>
+						<aside class="notes">
+						</aside>
+					</section>
+					
+					<section>
+						<h3>isa_ok( $object, $class, $object_name );</h3>
+<pre><code data-trim>
+isa_ok( TestModule->new, 'CoolModule', 'A cool module' );
+
+not ok 1 - 'A cool module' isa 'CoolModule'
+#   Failed test ''A cool module' isa 'CoolModule''
+#   at ./test.pl line 8.
+#     'A cool module' isn't a 'CoolModule'
+1..1
+</code></pre>
+						<aside class="notes">
+							new_ok works like isa_ok except that in returns an instantiated object as well. Module must use the new subroutine convention and return a single object of the requested module name in order to work.
+						</aside>
+					</section>
+					
+					<section>
+						<h3>pass or fail?</h3>
+<pre><code data-trim>
+pass( 'It works' );
+
+ok 1 - It works
+
+fail( 'It failed' );
+
+not ok 2 - It failed
+#   Failed test 'It failed'
+#   at ./test.pl line 10.
+</code></pre>
+						<aside class="notes">
+							You're not really testing anything with these subroutines but they can be useful to create a custom test that doesn't quite fit for another type of assertion
+						</aside>
+					</section>
+					
+					<section>
 						<h2>Testing Modules</h2>
 <pre><code data-trim>
-BEGIN { use_ok( $module ); }
+BEGIN { use_ok( 'ThisModule' ); }
 
-require_ok( $module );
+not ok 1 - use ThisModule;
+#   Failed test 'use ThisModule;'
+#   at ./test.pl line 8.
+#     Tried to use 'ThisModule'.
+#     Error:  Can't locate ThisModule.pm in @INC...
+
+require_ok('ThatModule');
+
+not ok 2 - require ThatModule;
+#   Failed test 'require ThatModule;'
+#   at ./test.pl line 10.
+#     Tried to require 'ThatModule'.
+#     Error:  Can't locate ThatModule.pm in @INC...
 </code></pre>
 						<aside class="notes">
 							It's recommended that you run use_ok() inside a BEGIN block so its functions are exported at compile-time and prototypes are properly honored.
@@ -582,7 +702,16 @@ require_ok( $module );
 					<section>
 						<h2>What about Data Structures?</h2>
 <pre><code data-trim>
-is_deeply( $got, $expected, $test_name );
+my $hash = { id => 1234, ara => [] };
+
+is_deeply( $hash, { id => 54321, ara => [] }, 'Hash returned is correct' );
+
+not ok 1 - Hash returned is correct
+#   Failed test 'Hash returned is correct'
+#   at ./test.pl line 10.
+#     Structures begin differing at:
+#          $got->{id} = '1234'
+#     $expected->{id} = '54321'
 </code></pre>
 						<aside class="notes">
 							is_deeply() compares the dereferenced values of references, the references themselves (except for their type) are ignored. This means aspects such as blessing and ties are not considered "different".
