@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>reveal.js - Test drive your code with Test::More</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="Test drive your code with Test::More">
+		<meta name="author" content="Travis Chase">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -680,17 +680,17 @@ BAIL_OUT("Stop the Presses!");
 ------ ------ ------ ------ ------ ------ ------
   stmt   bran   cond    sub    pod   time  total
 ------ ------ ------ ------ ------ ------ ------
-  89.0   45.9   38.6  100.0  100.0   82.8   75.9
-  97.2   93.7   66.6   93.7  100.0   13.4   92.4
-  100.0    n/a    n/a  100.0    n/a    1.4  100.0
-  89.4   50.0   33.3   85.7  100.0    1.2   78.3
-  95.0   50.0    n/a  100.0  100.0    0.4   93.0
-  100.0   50.0    n/a  100.0  100.0    0.6   96.6
-  92.3   54.0   45.5   97.2  100.0  100.0   82.8
------- ------ ------ ------ ------ ------ ------
+  93.6   63.5   45.4  100.0  100.0   89.6   82.8
+  97.2   93.7   66.6   93.7  100.0    7.8   92.4
+ 100.0    n/a    n/a  100.0    n/a    0.8  100.0
+  89.4   50.0   33.3   85.7  100.0    0.8   78.3
+  95.0   50.0    n/a  100.0  100.0    0.3   93.0
+ 100.0   50.0    n/a  100.0  100.0    0.4   96.6
+  94.8   67.3   50.0   97.2  100.0  100.0   86.7
+---------------------------- ------ ------ ------ ------ ------ ------ ------
 </code></pre>
 						<aside class="notes">
-							This is an example from a module I developed. You also will get a coverage summary HTML document That will show you line by line where you are missing coverage. I'm not going to display that in this talk.
+							This is an example from a module I developed. You also will get a coverage summary HTML document That will show you line by line where you are missing coverage. If we have time I will show that later.
 							Statement - A statement is covered if it is executed by at test. A statement is not necessarily one line of code.
 							Branches - A branch is covered if tests jump to all possiible destinations.
 							Conditions - A condition is covered all terms in the expression get used during testing.
@@ -708,7 +708,7 @@ BAIL_OUT("Stop the Presses!");
 					<section data-state="application" data-background="images/flickr.com/application.jpg">
 						<h2 class="overlay-text push-down-xsm">Applying what we learned...</h2>
 						<aside class="notes">
-							Break down some common scenarios you are likely to run into...
+							Let's break the common scenarios you are likely to run into...
 						</aside>
 					</section>
 					
@@ -739,6 +739,73 @@ BAIL_OUT("Stop the Presses!");
 					</section>
 				</section>
 				
+				<section>
+					<section data-background="images/lego_picture.jpg">
+						<h1 class="overlay-text">Lego::From::PNG</h1>
+						<aside class="notes">
+							Last year I attended a number of lego related functions where I noticed a kind of lego build that really interested me. The lego painting. The lego painting in the background is one such example.
+						</aside>
+					</section>
+					
+					<section>
+						<h2>Then I had a fun idea...</h2>
+						<p class="fragment">Image &rarr; Code &rarr; Lego Instructions &rarr; Lego painting!</p>
+						<aside class="notes">
+						</aside>
+					</section>
+					
+					<section>
+						<h2>Then I wanted to do this talk at OpenWest on TDD and Test::More...</h2>
+						<aside class="notes">
+						</aside>
+					</section>
+					
+					<section>
+						<h2>And I had another fun idea...</h2>
+						<p class="fragment">Prepare for the talk by implementing it's principles in a project!</p>
+						<aside class="notes">
+						</aside>
+					</section>
+					
+					<section>
+						<h2>metacpan.org/pod/Lego::From::PNG</h2>
+						<p>github.com/gaudeon/Lego-From-Png</p>
+						<aside class="notes">
+							Version 0.01 was released to CPAN as of May 6, 2015. It's still really rough around the edges but it works!
+						</aside>
+					</section>
+					
+					<section>
+						<h2>Test-first methodology... mostly</h2>
+						<ul>
+							<li class="fragment">8 Test Modules</li>
+							<li class="fragment">116 Test Cases</li>
+							<li class="fragment">Test Coverage Average of 86.7%</li>
+							<li class="fragment">Only 80% of the tests were implemented test-first</li>
+							<li class="fragment">Behavioral terminology was used in the test module creation</li>
+						</ul>
+						<aside class="notes">
+						</aside>
+					</section>
+					
+					<section>
+						<p><img src="images/avatar_cropped_pixelated_1.png" width="200" height="246"></p>
+						<p><a href="cover_db/coverage.html" target="_blank">Test Coverage</a></p>
+						<p><a href="instructions.html" target="_blank">Instructions</a></p>
+						<aside class="notes">
+						</aside>
+					</section>
+				</section>
+				
+				<section data-state="lego_house" data-background="images/flickr.com/lego_house.jpg">
+					<h3 class="overlay-text push-up-sm">
+						metacpan.org/pod/Lego::From::PNG<br>
+						github.com/gaudeon/Lego-From-Png
+					</h3>
+					<p class="fragment overlay-text">The word "test" was used 99 times in these slides.</p>
+					<aside class="notes">
+					</aside>
+				</section>
 				
 			</div>
 
@@ -761,6 +828,7 @@ BAIL_OUT("Stop the Presses!");
 			<div class="credit more_cowbell" data-img="images/flickr.com/more_cowbell.jpg">Photo: Danielle Scott | www.flickr.com/photos/danielle_scott | cc-by-sa</div>
 			<div class="credit space_invaders_blanket" data-img="images/flickr.com/space_invaders_blanket.jpg">Photo: Ana Petree Garcia | flickr.com/photos/iamduckydale | cc-by</div>
 			<div class="credit application" data-img="images/flickr.com/application.jpg">Photo: GotCredit | flickr.com/photos/jakerust | cc-by</div>
+			<div class="credit lego_house" data-img="images/flickr.com/lego_house.jpg">Photo: Nana B Agyei | flickr.com/photos/nanagyei | cc-by</div>
 		</div>
 
 		<script src="lib/js/head.min.js"></script>

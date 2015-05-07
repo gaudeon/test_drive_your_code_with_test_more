@@ -65,6 +65,10 @@
         &.push-up {
             margin-top: -7em;
         }
+        
+        &.push-up-sm {
+            margin-top: -5em;
+        }
     }
 
     p {
@@ -109,8 +113,12 @@
 @each $credit in (notebook, cats, bugged, torn_page, test_on_monitor,
                   awesome_street, stormtrooper, pure_gotham, test_tubes,
                   sidewalk_closed, elmers_glue, car_crash, domo,
-                  more_cowbell, space_invaders_blanket) {
+                  more_cowbell, space_invaders_blanket, lego_house) {
     .#{$credit} .credit.#{$credit} {
         display: block;
     }
+}
+
+html.lego_house .reveal .slide-background {
+    background-position: bottom center;
 }

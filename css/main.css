@@ -33,6 +33,8 @@
   margin-top: -9.5em; }
 .reveal h1.push-up, .reveal h2.push-up, .reveal h3.push-up, .reveal h4.push-up, .reveal h5.push-up, .reveal h6.push-up, .reveal p.push-up {
   margin-top: -7em; }
+.reveal h1.push-up-sm, .reveal h2.push-up-sm, .reveal h3.push-up-sm, .reveal h4.push-up-sm, .reveal h5.push-up-sm, .reveal h6.push-up-sm, .reveal p.push-up-sm {
+  margin-top: -5em; }
 .reveal p.overlay-text {
   padding: 1em; }
 .reveal p.indent-1 {
@@ -126,3 +128,9 @@
 
 .space_invaders_blanket .credit.space_invaders_blanket {
   display: block; }
+
+.lego_house .credit.lego_house {
+  display: block; }
+
+html.lego_house .reveal .slide-background {
+  background-position: bottom center; }
