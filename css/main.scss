@@ -113,7 +113,7 @@
 @each $credit in (notebook, cats, bugged, torn_page, test_on_monitor,
                   awesome_street, stormtrooper, pure_gotham, test_tubes,
                   sidewalk_closed, elmers_glue, car_crash, domo,
-                  more_cowbell, space_invaders_blanket, lego_house) {
+                  more_cowbell, space_invaders_blanket, lego_house, no) {
     .#{$credit} .credit.#{$credit} {
         display: block;
     }

@@ -145,7 +145,7 @@
 	
 					<section>
 						<h2>It's still just testing.</h2>
-						<ul class="fragment">
+						<ul>
 							<li>Catch human errors</li>
 							<li>or gain a different perspective of how your code works.</li>
 							<li>This could lead to structural improvements without changing code behavior.</li>
@@ -214,7 +214,7 @@
 					<section>
 						<h2>Test Runner</h2>
 						<p>Software utilizing some kind test harness to run your tests.</p>
-						<div class="fragment">
+						<div>
 							<p><em>prove</em> is a built-in test runner for Perl.</p>
 							<code>prove -v -Ilib t/</code>
 						</div>
@@ -225,7 +225,7 @@
 					<section>
 						<h2>Test Harness</h2>
 						<p>Run a specified set of test modules (units) and report it's findings.</p>
-						<div class="fragment">
+						<div>
 							<p><em>TAP::Harness</em> is a built-in test harness for Perl.</p>
 <pre><code data-trim>
 #!/usr/bin/env perl
@@ -250,22 +250,22 @@ $harness->runtests(@ARGV);</code></pre>
 					<section>
 						<h2>Test Framework</h2>
 						<p>A set of functions that check some result/aspect of a code statement and declares whether or not it is ok. The test harness listens for these declarations.</p>
-						<div class="fragment">
+						<div>
 <pre><code data-trim>
 use Test::Simple;
 
 use Test::More;
 
-use Test::Data;
+use Test::Unit;
 
-use Test::Deep;</code></pre>
+use Test::BDD::Cucumber</code></pre>
 						</div>
 					</section>
 					
 					<section>
 						<h2>Test Module</h2>
 						<p>A file, utilizing a test framework, containing a series of tests to run.</p>
-						<div class="fragment">
+						<div>
 <pre><code data-trim>
 use strict;
 use warnings;
@@ -283,7 +283,7 @@ done_testing();</code></pre>
 					<section>
 						<h2>Test Assertion</h2>
 						<p>A test for some aspect of the software usually related to the test modules' overall purpose.</p>
-						<div class="fragment">
+						<div>
 <pre><code data-trim>
 # snippet
 ok( life_the_universe_and_everything() == 42 );</code></pre>
@@ -302,15 +302,15 @@ ok( life_the_universe_and_everything() == 42 );</code></pre>
 					
 					<section>
 						<h2>What is it?</h2>
-						<p>A simple text-based output format for communicating the outcome of tests from test modules executed, for display purposes, by a test harness.</p>
+						<p>A simple text-based output format for communicating the outcome of tests from test modules executed by a test harness.</p>
 						<aside class="notes">
-							Long-winded definition
 						</aside>
 					</section>
 					
 					<section data-state="sidewalk_closed" data-background="images/flickr.com/sidewalk_closed.jpg">
 						<h1 class="overlay-text">Huh?</h1>
 						<aside class="notes">
+							In case that made you go huh?
 						</aside>
 					</section>
 					
@@ -334,8 +334,7 @@ ok( life_the_universe_and_everything() == 42 );</code></pre>
 					</section>
 					
 					<section>
-						<h2>Sample 1</h2>
-						<h3>Things are good!</h3>
+						<h2>Things are good!</h2>
 <pre><code data-trim>
 ok 1 - Result is a SCALAR and not a reference
 ok 2 - JSON decoded back to hash correctly
@@ -345,8 +344,7 @@ ok 2 - JSON decoded back to hash correctly
 					</section>
 					
 					<section>
-						<h2>Sample 2</h2>
-						<h3>Things didn't go as smoothly :(</h3>
+						<h2>Not so good :(</h2>
 <pre><code data-trim>
 ok 1 - Result is a SCALAR and not a reference
 not ok 2 - JSON decoded back to hash correctly
@@ -370,7 +368,7 @@ not ok 2 - JSON decoded back to hash correctly
 					</section>
 					
 					<section>
-						<h2>Sample 1</h2>
+						<h2>All is well</h2>
 <pre><code data-trim>
 t/when_viewing_response_as_json.t ..
 ok 1 - Result is a SCALAR and not a reference
@@ -385,7 +383,7 @@ Result: PASS</code></pre>
 					</section>
 					
 					<section>
-						<h2>Sample 2</h2>
+						<h2>Darn, darn, darn, darny-darn!</h2>
 <pre><code data-trim>
 t/when_viewing_response_as_json.t ..
 ok 1 - Result is a SCALAR and not a reference
@@ -416,7 +414,7 @@ Result: FAIL</code></pre>
 						<h2>CPAN Modules</h2>
 						<pre><code data-trim>cpan -i &lt;module&gt;</code></pre>
 						<div class="fragment">
-							<p>Idealy modules have great test coverage and when you install one you will see TAP output interpretted by a test harness.</p>
+							<p>During installation you will usually see TAP output interpretted by a test harness.</p>
 <pre><code data-trim>
 Running make test
 PERL_DL_NONLAZY=1 /usr/bin/perl "-MExtUtils::Command::MM" "-e" "test_harness(0, 'blib/lib', 'blib/arch')" t/*.t
@@ -433,10 +431,15 @@ Result: PASS
 					
 					<section>
 						<h2>CPAN Modules</h2>
-						<p>Then if it succeeds you get your module installed, otherwise you force it to install, right?</p>
+						<p>Then if the tests fail, you force it to install right?</p>
 						<pre><code data-trim>cpan -if &lt;module&gt;</code></pre>
 						<aside class="notes">
 							I put if there on purpose, because if it installs then you are lucky.
+						</aside>
+					</section>
+					
+					<section data-state="no" data-background="images/flickr.com/no.jpg">
+						<aside class="notes">
 						</aside>
 					</section>
 					
@@ -467,7 +470,7 @@ Result: PASS
 					</section>
 					
 					<section>
-						<h2>Cool things about Test::More</h2>
+						<h2>Test::More</h2>
 						<ul>
 							<li class="fragment">metacpan.org/pod/Test::More</li>
 							<li class="fragment">"Standard" test framework for Perl.</li>
@@ -816,8 +819,7 @@ BAIL_OUT("Stop the Presses!");
   95.0   50.0    n/a  100.0  100.0    0.3   93.0
  100.0   50.0    n/a  100.0  100.0    0.4   96.6
   94.8   67.3   50.0   97.2  100.0  100.0   86.7
----------------------------- ------ ------ ------ ------ ------ ------ ------
-</code></pre>
+------ ------ ------ ------ ------ ------ ------</code></pre>
 						<aside class="notes">
 							This is an example from a module I developed. You also will get a coverage summary HTML document That will show you line by line where you are missing coverage. If we have time I will show that later.
 							Statement - A statement is covered if it is executed by at test. A statement is not necessarily one line of code.
@@ -844,10 +846,10 @@ BAIL_OUT("Stop the Presses!");
 					<section>
 						<h2>Using an existing code base</h2>
 						<ul>
-							<li class="fragment">Have a best practice that everyone follows</li>
+							<li class="fragment">Have a best practices / procedures</li>
 							<li class="fragment">Ease into the testing.</li>
 							<li class="fragment">Create tests for all the new features.</li>
-							<li class="fragment">Bugs are a greate opportunity to add a test or two on the old stuff!</li>
+							<li class="fragment">Bugs are a great opportunity to add a test or two on the old stuff!</li>
 						</ul>
 						<aside class="notes">
 							Team or Solo this is good advice
@@ -858,7 +860,7 @@ BAIL_OUT("Stop the Presses!");
 						<h2>Creating a new code base</h2>
 						<ul>
 							<li class="fragment">Free to "do things right" from the beginning</li>
-							<li class="fragment">Have a best practice for yourself to follow</li>
+							<li class="fragment">Have a best practices / procedures</li>
 							<li class="fragment">Following a test-first methodology can really win in this situation.</li>
 						</ul>
 						<aside class="notes">
@@ -931,7 +933,7 @@ BAIL_OUT("Stop the Presses!");
 						metacpan.org/pod/Lego::From::PNG<br>
 						github.com/gaudeon/Lego-From-Png
 					</h3>
-					<p class="fragment overlay-text">The word "test" was used 99 times in these slides.</p>
+					<p class="fragment overlay-text">The word "test" was used 139 times in the making of these slides.</p>
 					<aside class="notes">
 					</aside>
 				</section>
@@ -958,6 +960,7 @@ BAIL_OUT("Stop the Presses!");
 			<div class="credit space_invaders_blanket" data-img="images/flickr.com/space_invaders_blanket.jpg">Photo: Ana Petree Garcia | flickr.com/photos/iamduckydale | cc-by</div>
 			<div class="credit application" data-img="images/flickr.com/application.jpg">Photo: GotCredit | flickr.com/photos/jakerust | cc-by</div>
 			<div class="credit lego_house" data-img="images/flickr.com/lego_house.jpg">Photo: Nana B Agyei | flickr.com/photos/nanagyei | cc-by</div>
+			<div class="credit no" data-img="images/flickr.com/no.jpg">Photo: Henry Burrows | flickr.com/photos/foilman | cc-by-sa</div>
 		</div>
 
 		<script src="lib/js/head.min.js"></script>

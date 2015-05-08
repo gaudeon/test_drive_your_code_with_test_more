@@ -132,5 +132,8 @@
 .lego_house .credit.lego_house {
   display: block; }
 
+.no .credit.no {
+  display: block; }
+
 html.lego_house .reveal .slide-background {
   background-position: bottom center; }
