@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/moon.css" id="theme">
+		<link rel="stylesheet" href="css/theme/league.css" id="theme">
 		<link rel="stylesheet" href="css/main.css">
 
 		<!-- Code syntax highlighting -->
@@ -46,15 +46,15 @@
                     <h2>Test drive your code with Test::More</h2>
                     <img src="images/Avatar_Circle_200.png" width="200" height="200" class="no-border">
                     <p>Travis Chase</p>
-                    <p>https://github.com/gaudeon/</p>
+                    <p><a href="http://github.com/gaudeon/" target="_blank">github.com/gaudeon/</a></p>
 					<aside class="notes">
 					</aside>
                 </section>
 
 				<!-- STORY -->
 				<section>
-					<section data-state="notebook" data-background="images/raumrot.com/notebook.jpg">
-						<h1 class="overlay-text">Story...</h1>
+					<section data-background="images/chaz_test_shirt.jpg">
+						<h2 class="overlay-text">Story...</h2>
 						<aside class="notes">
 						  I first got into Perl 20 years ago...<br>
 						  I didn't start testing my Perl code until about a decade ago...
@@ -132,7 +132,7 @@
 							<li class="fragment">Repeat</li>
 						</ol>
 						<br><br>
-						<small class="fragment">http://en.wikipedia.org/wiki/Test-driven_development</small>
+						<small class="fragment"><a href="http://en.wikipedia.org/wiki/Test-driven_development" target="_blank">en.wikipedia.org/wiki/Test-driven_development</a></small>
 						<aside class="notes">
 						</aside>
 					</section>
@@ -161,7 +161,7 @@
 						<p class="overlay-text">
 							The <em>greatest benefit</em> of Test Drive Design...
 						</p>
-						<p class="overlay-text push-down fragment">
+						<p class="overlay-text push-down">
 							You are forced to think about the design of your software before implementing it.
 						</p>
 						<aside class="notes">
@@ -182,8 +182,8 @@
 					</section>
 	
 					<section>
-						<h3>However...</h3>
-						<p>...if you like the idea of Test Driven Design, you might also want to look into Behavior Driven Design.</p>
+						<h3>If you like the idea of Test Driven Design, you might also want to look into Behavior Driven Design.</h3>
+						<a href="http://en.wikipedia.org/wiki/Behavior-driven_development" target="_blank">en.wikipedia.org/wiki/Behavior-driven_development</a>
 						<aside class="notes">
 							That's beyond the scope of this talk. However I will mention one of the things I have been really liking from BDD, even though I may not be following that entire process. That is using three specific words to frame my tests: Given, When and Should
 						</aside>
@@ -325,8 +325,8 @@ ok( life_the_universe_and_everything() == 42 );</code></pre>
 						<ul>
 							<li class="fragment">It's been around a while... since 1988!</li>
 							<li class="fragment">While it started in Perl, it is now implemented in many other languages such as C, C++, Erlang, Javascript, PHP, Python and Ruby.</li>
-							<li class="fragment">It has it's own EBNF Grammar. ( TAP::Parser::Grammar )</em></li>
-							<li class="fragment">It's still evolving. ( https://github.com/TestAnything )</li>
+							<li class="fragment">It has it's own EBNF Grammar. <a href="https://metacpan.org/pod/TAP::Parser::Grammar" target="_blank">TAP::Parser::Grammar</a></em></li>
+							<li class="fragment">It's still evolving. <a href="https://github.com/TestAnything" target="_blank">github.com/TestAnything</a></li>
 						</ul>
 						<aside class="notes">
 							They are currently working on version 14.
@@ -472,10 +472,11 @@ Result: PASS
 					<section>
 						<h2>Test::More</h2>
 						<ul>
-							<li class="fragment">metacpan.org/pod/Test::More</li>
+							<li class="fragment"><a href="http://metacpan.org/pod/Test::More" target="_blank">metacpan.org/pod/Test::More</a></li>
 							<li class="fragment">"Standard" test framework for Perl.</li>
 							<li class="fragment">14 years old and well maintained.</li>
 							<li class="fragment">In fact it's going through a big refactor right now.</li>
+							<li class="fragment"><a href="http://blogs.perl.org/users/chad_exodist_granum" target="_blank">blogs.perl.org/users/chad_exodist_granum</a></li>
 						</ul>
 						<aside class="notes">
 							What is truly standard in Perl when Tim Toady (TIMTOWTDI)?
@@ -726,7 +727,7 @@ not ok 1 - Hash returned is correct
 					<section data-state="more_cowbell" data-background="images/flickr.com/more_cowbell.jpg">
 						<div class="overlay-text push-up-lg">
 							<h2>Want more tests for Data::Structures?</h2>
-							<p>Look into <strong>Test::Deep</strong> or <strong>Test::Differences</strong></p>
+							<p>Look into <strong><a href="https://metacpan.org/pod/Test::Deep" target="_blank">Test::Deep</a></strong> or <strong><a href="https://metacpan.org/pod/Test::Differences" target="_blank">Test::Differences</a></strong></p>
 						</div>
 						<aside class="notes">
 							It's beyond the scope of this talk but there are other modules with more assertions related to Data Structures.
@@ -777,6 +778,33 @@ BAIL_OUT("Stop the Presses!");
 							There is also Test::Most which gives more control over how you bail out.
 						</aside>
 					</section>
+					
+					<section data-state="detour" data-background="images/flickr.com/detour.jpg">
+						<h2 class="overlay-text">Mock::Quick</h2>
+					</section>
+					
+					<section>
+						<a href="" target="_blank">Mock::Quick</a>
+<pre><code data-trim>
+use Mock::Quick;
+ 
+my $control = qclass(
+    -implement  => 'My::Package',
+    -with_new   => 1, # Insert a generic new() method (blessed hash)
+    -subclass   => [ 'Class::A', 'Class::B' ], # Inheritance
+    -attributes => [ qw/a b c d/ ], # generic get/set attribute methods.
+    simple      => 'value', # Method that simply returns a value.
+    method      => sub { ... }, # Custom method.
+);
+ 
+my $obj = My::Package->new;
+ 
+$control->override( foo => sub { ... });# Override a method
+$control->restore( 'foo' ); # Restore it to the original
+
+$control->undefine(); # Remove the namespace we created,
+</code></pre>
+					</section>
 				</section>
 				
 				<!-- Devel::Cover -->
@@ -792,7 +820,7 @@ BAIL_OUT("Stop the Presses!");
 						<h2>Devel::Cover</h2>
 						
 						<ul>
-							<li class="fragment">metacpan.org/pod/Devel::Cover</li>
+							<li class="fragment"><a href="https://metacpan.org/pod/Devel::Cover" target="_blank">metacpan.org/pod/Devel::Cover</a></li>
 							<li class="fragment">Get coverage results on modules and/or programs.</li>
 							<li class="fragment">Very friendly with t/*.t test frameworks</li>
 						</ul>
@@ -870,37 +898,25 @@ BAIL_OUT("Stop the Presses!");
 					</section>
 				</section>
 				
+				<!-- Lego::From::PNG -->
 				<section>
 					<section data-background="images/lego_picture.jpg">
-						<h1 class="overlay-text">Lego::From::PNG</h1>
+						<h1 class="overlay-text">I had this idea...</h1>
 						<aside class="notes">
 							Last year I attended a number of lego related functions where I noticed a kind of lego build that really interested me. The lego painting. The lego painting in the background is one such example.
 						</aside>
 					</section>
 					
 					<section>
-						<h2>Then I had a fun idea...</h2>
-						<p class="fragment">Image &rarr; Code &rarr; Lego Instructions &rarr; Lego painting!</p>
-						<aside class="notes">
-						</aside>
-					</section>
-					
-					<section>
 						<h2>Then I wanted to do this talk at OpenWest on TDD and Test::More...</h2>
+						<h2 class="fragment">Why not do both?</h2>
 						<aside class="notes">
 						</aside>
 					</section>
 					
 					<section>
-						<h2>And I had another fun idea...</h2>
-						<p class="fragment">Prepare for the talk by implementing it's principles in a project!</p>
-						<aside class="notes">
-						</aside>
-					</section>
-					
-					<section>
-						<h2>metacpan.org/pod/Lego::From::PNG</h2>
-						<p>github.com/gaudeon/Lego-From-Png</p>
+						<h2><a href="http://metacpan.org/pod/Lego::From::PNG" target="_blank">metacpan.org/pod/Lego::From::PNG</a></h2>
+						<p><a href="http://github.com/gaudeon/Lego-From-Png" target="_blank">github.com/gaudeon/Lego-From-Png</a></p>
 						<aside class="notes">
 							Version 0.01 was released to CPAN as of May 6, 2015. It's still really rough around the edges but it works!
 						</aside>
@@ -921,8 +937,8 @@ BAIL_OUT("Stop the Presses!");
 					
 					<section>
 						<p><img src="images/avatar_cropped_pixelated_1.png" width="200" height="246"></p>
-						<p><a href="cover_db/coverage.html" target="_blank">Test Coverage</a></p>
-						<p><a href="instructions.html" target="_blank">Instructions</a></p>
+						<p><a href="cover_db/coverage.html" target="_blank">Test Coverage - v0.02</a></p>
+						<p><a href="instructions.html" target="_blank">Instructions - v0.02</a></p>
 						<aside class="notes">
 						</aside>
 					</section>
@@ -930,10 +946,10 @@ BAIL_OUT("Stop the Presses!");
 				
 				<section data-state="lego_house" data-background="images/flickr.com/lego_house.jpg">
 					<h3 class="overlay-text push-up-sm">
-						metacpan.org/pod/Lego::From::PNG<br>
+						Thanks!<br>
 						github.com/gaudeon/Lego-From-Png
 					</h3>
-					<p class="fragment overlay-text">The word "test" was used 139 times in the making of these slides.</p>
+					<p class="fragment overlay-text">The word "test" was used 140 times in the making of these slides.</p>
 					<aside class="notes">
 					</aside>
 				</section>
@@ -943,7 +959,6 @@ BAIL_OUT("Stop the Presses!");
 		</div>
 		
 		<div class="credits">
-			<div class="credit notebook" data-img="images/raumrot.com/notebook.jpg">Photo: Markus Spiske | raumrot.com | cc-by</div>
 			<div class="credit cats" data-img="images/gratisography.com/cats.jpg">Photo: Ryan McGuire | gratisography.com | cc-zero</div>
 			<div class="credit bugged" data-img="images/flickr.com/bugged.jpg">Photo: Oℓivia | flickr.com/photos/kjellander | cc-by-nc-sa </div>
 			<div class="credit torn_page" data-img="images/gratisography.com/torn_page.jpg">Photo: Ryan McGuire | gratisography.com | cc-zero</div>
@@ -961,6 +976,7 @@ BAIL_OUT("Stop the Presses!");
 			<div class="credit application" data-img="images/flickr.com/application.jpg">Photo: GotCredit | flickr.com/photos/jakerust | cc-by</div>
 			<div class="credit lego_house" data-img="images/flickr.com/lego_house.jpg">Photo: Nana B Agyei | flickr.com/photos/nanagyei | cc-by</div>
 			<div class="credit no" data-img="images/flickr.com/no.jpg">Photo: Henry Burrows | flickr.com/photos/foilman | cc-by-sa</div>
+			<div class="credit detour" data-img="images/flickr.com/detour.jpg">Photo: Shannon Kokoska | flickr.com/photos/shannonmary | cc-by-nc-nd</div>
 		</div>
 
 		<script src="lib/js/head.min.js"></script>

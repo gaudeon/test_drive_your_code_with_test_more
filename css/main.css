@@ -16,6 +16,8 @@
   background-color: rgba(255, 255, 255, 0.75); }
 .reveal div.overlay-text.push-up-lg {
   margin-top: -9.5em; }
+.reveal div.overlay-text a {
+  color: #53adb4; }
 .reveal h1.overlay-text, .reveal h2.overlay-text, .reveal h3.overlay-text, .reveal h4.overlay-text, .reveal h5.overlay-text, .reveal h6.overlay-text, .reveal p.overlay-text {
   color: rgba(0, 0, 0, 0.8);
   background-color: rgba(255, 255, 255, 0.75); }
