@@ -11,6 +11,8 @@
             position: absolute;
             top: 50%;
             left:78%;*/ }
+.reveal section code.larger {
+  max-height: 500px; }
 .reveal div.overlay-text h1, .reveal div.overlay-text h2, .reveal div.overlay-text h3, .reveal div.overlay-text h4, .reveal div.overlay-text h5, .reveal div.overlay-text h6, .reveal div.overlay-text p {
   color: rgba(0, 0, 0, 0.8);
   background-color: rgba(255, 255, 255, 0.75); }
@@ -135,6 +137,9 @@
   display: block; }
 
 .no .credit.no {
+  display: block; }
+
+.back_to_the_future .credit.back_to_the_future {
   display: block; }
 
 html.lego_house .reveal .slide-background {

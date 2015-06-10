@@ -10,7 +10,7 @@
             background: transparent;
             box-shadow: none;
         }
-        
+
         div.credit {
             font-size: small;
             color: rgba(0,0,0,.8);
@@ -21,17 +21,21 @@
             top: 50%;
             left:78%;*/
         }
+
+        code.larger {
+            max-height: 500px;
+        }
     }
-    
+
     div.overlay-text {
         h1, h2, h3, h4, h5, h6, p {
             @include overlay-text;
         }
-        
+
         &.push-up-lg {
             margin-top: -9.5em;
         }
-        
+
         a {
             color: #53adb4;
         }
@@ -41,7 +45,7 @@
         &.overlay-text {
             @include overlay-text;
         }
-        
+
         &.push-down-lg {
             margin-top: 14em;
         }
@@ -49,19 +53,19 @@
         &.push-down {
             margin-top: 10em;
         }
-        
+
         &.push-down-sm {
             margin-top: 8em;
         }
-        
+
         &.push-down-xsm {
             margin-top: 4.5em;
         }
-        
+
         &.push-down-xxsm {
             margin-top: 2.15em;
         }
-        
+
         &.push-up-lg {
             margin-top: -9.5em;
         }
@@ -69,7 +73,7 @@
         &.push-up {
             margin-top: -7em;
         }
-        
+
         &.push-up-sm {
             margin-top: -5em;
         }
@@ -79,7 +83,7 @@
         &.overlay-text {
            padding: 1em;
         }
-        
+
         @for $n from 1 through 10 {
             &.indent-#{$n} {
                 text-align: left;
@@ -87,13 +91,13 @@
             }
         }
     }
-    
+
     span {
         &.smaller {
             font-size: medium;
         }
     }
-    
+
     pre {
         padding: 1em;
     }
@@ -114,10 +118,11 @@
     }
 }
 
-@each $credit in (notebook, cats, bugged, torn_page, test_on_monitor,
+@each $credit in ( notebook, cats, bugged, torn_page, test_on_monitor,
                   awesome_street, stormtrooper, pure_gotham, test_tubes,
                   sidewalk_closed, elmers_glue, car_crash, domo,
-                  more_cowbell, space_invaders_blanket, lego_house, no) {
+                  more_cowbell, space_invaders_blanket, lego_house, no,
+                  back_to_the_future ) {
     .#{$credit} .credit.#{$credit} {
         display: block;
     }

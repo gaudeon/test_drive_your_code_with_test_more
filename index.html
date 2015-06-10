@@ -51,6 +51,13 @@
 					</aside>
                 </section>
 
+				<section>
+                    <h2>Test drive your code with Test::More</h2>
+					<h1>Version 1.42! with more test goodness</h1>
+					<aside class="notes">
+					</aside>
+                </section>
+
 				<!-- STORY -->
 				<section>
 					<section data-background="images/chaz_test_shirt.jpg">
@@ -62,17 +69,17 @@
 						  I'm still not 100% TDD, there is a lot of temptation to be lazy about my code is great and powerful...
 						</aside>
 					</section>
-	
+
 					<section>
 						<h1>...the Moral?</h1>
 						<h2 class="fragment">Don't be like me</h2>
 						<aside class="notes">
 						</aside>
 					</section>
-	
-					
+
+
 				</section>
-				
+
 				<!-- PROPAGANDA -->
 				<section>
 					<section data-state="cats" data-background="images/gratisography.com/cats.jpg">
@@ -94,7 +101,7 @@
 						<aside class="notes">
 						</aside>
 					</section>
-					
+
 					<section data-state="bugged" data-background="images/flickr.com/bugged.jpg">
 						<h2 class="overlay-text">You can't prove the absence of bugs!</h2>
 						<aside class="notes">
@@ -104,7 +111,7 @@
 						</aside>
 					</section>
 				</section>
-				
+
 				<!-- TDD -->
 				<section>
 					<section data-state="torn_page" data-background="images/gratisography.com/torn_page.jpg">
@@ -113,14 +120,14 @@
 							Test Driven Design
 						</aside>
 					</section>
-	
+
 					<section>
 						<h3>It's pretty simple...</h3>
 						<img src="images/TDD_cycle.png" width="500" height="500" class="no-border">
 						<aside class="notes">
 						</aside>
 					</section>
-	
+
 					<section>
 						<h3>...but here is a more formal description of the process.</h3>
 						<ol>
@@ -132,17 +139,17 @@
 							<li>Repeat</li>
 						</ol>
 						<br><br>
-						<small class="fragment"><a href="http://en.wikipedia.org/wiki/Test-driven_development" target="_blank">en.wikipedia.org/wiki/Test-driven_development</a></small>
+						<small><a href="http://en.wikipedia.org/wiki/Test-driven_development" target="_blank">en.wikipedia.org/wiki/Test-driven_development</a></small>
 						<aside class="notes">
 						</aside>
 					</section>
-	
+
 					<section data-state="test_on_monitor" data-background="images/flickr.com/test_on_monitor.jpg">
 						<h1 class="overlay-text">Why TDD?</h1>
 						<aside class="notes">
 						</aside>
 					</section>
-	
+
 					<section>
 						<h2>It's still just testing.</h2>
 						<ul>
@@ -156,7 +163,7 @@
 						<aside class="notes">
 						</aside>
 					</section>
-	
+
 					<section data-state="awesome_street" data-background="images/flickr.com/awesome_street.jpg">
 						<p class="overlay-text">
 							The <em>greatest benefit</em> of Test Drive Design...
@@ -167,20 +174,20 @@
 						<aside class="notes">
 						</aside>
 					</section>
-	
+
 					<section>
 						<h1>Still not convinced?</h1>
 						<aside class="notes">
 						</aside>
 					</section>
-	
+
 					<section data-state="stormtrooper" data-background="images/flickr.com/stormtrooper.jpg">
 						<h3 class="overlay-text push-down">No worries...</h3>
 						<aside class="notes">
-							Find a methodology that works for you. Just be sure to test your code to death and test it again after that. 
+							Find a methodology that works for you. Just be sure to test your code to death and test it again after that.
 						</aside>
 					</section>
-	
+
 					<section>
 						<h3>If you like the idea of Test Driven Design, you might also want to look into Behavior Driven Design.</h3>
 						<a href="http://en.wikipedia.org/wiki/Behavior-driven_development" target="_blank">en.wikipedia.org/wiki/Behavior-driven_development</a>
@@ -189,28 +196,28 @@
 						</aside>
 					</section>
 				</section>
-				
+
 				<!-- Testing Architecture -->
 				<section>
 					<section data-state="pure_gotham" data-background="images/flickr.com/pure_gotham.jpg">
-						<h1 class="overlay-text">Testing Architecture</h1>
+						<h1 class="overlay-text">Testing Architecture <small>(Loose Definition)</small></h1>
 						<aside class="notes">
 						</aside>
 					</section>
-					
+
 					<section>
 						<h2>Overview</h2>
 						<div>
 							<p class="fragment indent-1">Test Runner - <em>prove</em></p>
 							<p class="fragment indent-2">&#8627; Test Harness - <em>TAP::Harness</em></p>
-							<p class="fragment indent-3">&#8627; Test Framework - <em>Test::More</em></p>
+							<p class="fragment indent-3">&#8627; Test Library(ies) - <em>Test::More</em></p>
 							<p class="fragment indent-4">&#8627; Test Module(s) - <em>*.t files</em></p>
 							<p class="fragment indent-5">&#8627; Test Assertion(s) - <em>ok, cmp_ok, like, etc.</em></p>
 						</div>
 						<aside class="notes">
 						</aside>
 					</section>
-					
+
 					<section>
 						<h2>Test Runner</h2>
 						<p>Software utilizing some kind test harness to run your tests.</p>
@@ -221,7 +228,7 @@
 						<aside class="notes">
 						</aside>
 					</section>
-					
+
 					<section>
 						<h2>Test Harness</h2>
 						<p>Run a specified set of test modules (units) and report it's findings.</p>
@@ -246,9 +253,9 @@ $harness->runtests(@ARGV);</code></pre>
 							Though originally it was called Test::Harness. There is still a Test::Harness module for backwards compatibility, it just uses TAP::Harness.
 						</aside>
 					</section>
-					
+
 					<section>
-						<h2>Test Framework</h2>
+						<h2>Test Library(ies)</h2>
 						<p>A set of functions that check some result/aspect of a code statement and declares whether or not it is ok. The test harness listens for these declarations.</p>
 						<div>
 <pre><code data-trim>
@@ -261,10 +268,10 @@ use Test::Unit;
 use Test::BDD::Cucumber</code></pre>
 						</div>
 					</section>
-					
+
 					<section>
 						<h2>Test Module</h2>
-						<p>A file, utilizing a test framework, containing a series of tests to run.</p>
+						<p>A file, utilizing test libraries, containing a series of tests to run.</p>
 						<div>
 <pre><code data-trim>
 use strict;
@@ -279,7 +286,7 @@ ok( life_the_universe_and_everything() == 42 );
 done_testing();</code></pre>
 						</div>
 					</section>
-					
+
 					<section>
 						<h2>Test Assertion</h2>
 						<p>A test for some aspect of the software usually related to the test modules' overall purpose.</p>
@@ -290,7 +297,7 @@ ok( life_the_universe_and_everything() == 42 );</code></pre>
 						</div>
 					</section>
 				</section>
-				
+
 				<!-- TAP -->
 				<section>
 					<section data-state="test_tubes" data-background="images/flickr.com/test_tubes.jpg">
@@ -299,27 +306,27 @@ ok( life_the_universe_and_everything() == 42 );</code></pre>
 							Test Anything Protocol
 						</aside>
 					</section>
-					
+
 					<section>
 						<h2>What is it?</h2>
 						<p>A simple text-based output format for communicating the outcome of tests from test modules executed by a test harness.</p>
 						<aside class="notes">
 						</aside>
 					</section>
-					
+
 					<section data-state="sidewalk_closed" data-background="images/flickr.com/sidewalk_closed.jpg">
 						<h1 class="overlay-text">Huh?</h1>
 						<aside class="notes">
 							In case that made you go huh?
 						</aside>
 					</section>
-					
+
 					<section data-state="elmers_glue" data-background="images/flickr.com/elmers_glue.jpg">
 						<h3 class="overlay-text">TAP is the glue between a test framework and test harness</h3>
 						<aside class="notes">
 						</aside>
 					</section>
-					
+
 					<section>
 						<h2>Cool things about TAP</h2>
 						<ul>
@@ -332,7 +339,7 @@ ok( life_the_universe_and_everything() == 42 );</code></pre>
 							They are currently working on version 14.
 						</aside>
 					</section>
-					
+
 					<section>
 						<h2>Things are good!</h2>
 <pre><code data-trim>
@@ -342,7 +349,7 @@ ok 2 - JSON decoded back to hash correctly
 						<aside class="notes">
 						</aside>
 					</section>
-					
+
 					<section>
 						<h2>Not so good :(</h2>
 <pre><code data-trim>
@@ -359,14 +366,14 @@ not ok 2 - JSON decoded back to hash correctly
 						<aside class="notes">
 						</aside>
 					</section>
-					
+
 					<section>
 						<h3>So what does the test harness show?</h3>
 						<aside class="notes">
 							Normally you don't see that, though as that the Test Harness would grab that output parse it and use it in it's own output.
 						</aside>
 					</section>
-					
+
 					<section>
 						<h2>All is well</h2>
 <pre><code data-trim>
@@ -381,10 +388,10 @@ Result: PASS</code></pre>
 						<aside class="notes">
 						</aside>
 					</section>
-					
+
 					<section>
 						<h2>Darn, darn, darn, darny-darn!</h2>
-<pre><code data-trim>
+<pre><code data-trim class="larger">
 t/when_viewing_response_as_json.t ..
 ok 1 - Result is a SCALAR and not a reference
 not ok 2 - JSON decoded back to hash correctly
@@ -409,7 +416,7 @@ Result: FAIL</code></pre>
 						<aside class="notes">
 						</aside>
 					</section>
-				
+
 					<section>
 						<h2>CPAN Modules</h2>
 						<pre><code data-trim>cpan -i &lt;module&gt;</code></pre>
@@ -428,7 +435,7 @@ Result: PASS
 						<aside class="notes">
 						</aside>
 					</section>
-					
+
 					<section>
 						<h2>CPAN Modules</h2>
 						<p>Then if the tests fail, you force it to install right?</p>
@@ -437,17 +444,17 @@ Result: PASS
 							I put if there on purpose, because if it installs then you are lucky.
 						</aside>
 					</section>
-					
+
 					<section data-state="no" data-background="images/flickr.com/no.jpg">
 						<aside class="notes">
 						</aside>
 					</section>
-					
+
 					<section>
 						<h2>CPAN Modules</h2>
 						<p>It is likely a better idea to read what the tests are reporting and try to resolve the failure.</p>
 					</section>
-					
+
 					<section data-state="car_crash" data-background="images/flickr.com/car_crash.jpg">
 						<h3 class="overlay-text push-down-sm">
 							<p class="indent-1">
@@ -460,7 +467,7 @@ Result: PASS
 						</aside>
 					</section>
 				</section>
-				
+
 				<!-- Test::More -->
 				<section>
 					<section data-state="domo" data-background="images/flickr.com/domo.jpg">
@@ -468,7 +475,7 @@ Result: PASS
 						<aside class="notes">
 						</aside>
 					</section>
-					
+
 					<section>
 						<h2>Test::More</h2>
 						<ul>
@@ -483,7 +490,7 @@ Result: PASS
 							Chad "Exodist" Granum - will be at YAPC::NA talking about those changes in fact. (http://www.yapcna.org/yn2015/talk/5937)
 						</aside>
 					</section>
-					
+
 					<section>
 						<h2>Overview</h2>
 <pre><code data-trim>
@@ -499,7 +506,7 @@ diag("I am a comment output in results");
 
 SKIP: {
 	"Not ready to do this test", 1 if skip_this();
-	
+
 	ok(test_something(), "Something ok");
 }
 
@@ -508,7 +515,7 @@ done_testing();
 						<aside class="notes">
 						</aside>
 					</section>
-					
+
 					<section>
 						<h2>What's the plan?</h2>
 <pre><code data-trim>
@@ -518,7 +525,7 @@ use Test::More tests => 42;
 
 use Test::More;
 
-done_testing(42);
+done_testing();
 
 # or
 
@@ -534,7 +541,7 @@ plan scalar @test_list;
 							Remember TAP output needs to display the number of tests being run before or after the test output. So a plan is needed. Your output will tell you when you forget to provide a plan, or if you don't provide the correct number of tests.
 						</aside>
 					</section>
-					
+
 					<section>
 						<h2>Data Assertions</h2>
 <pre><code data-trim>
@@ -553,7 +560,7 @@ cmp_ok( $got, $op, $expected, $test_name );
 						<aside class="notes">
 						</aside>
 					</section>
-					
+<!--
 					<section>
 						<h3>ok( $got, $test_name );</h3>
 <pre><code data-trim>
@@ -566,7 +573,7 @@ not ok 1 - ok
 						<aside class="notes">
 						</aside>
 					</section>
-					
+
 					<section>
 						<h3>is( $got, $expected, $test_name );</h3>
 <pre><code data-trim>
@@ -582,7 +589,7 @@ not ok 1 - is it working?
 							isnt test works like is test but in reverse
 						</aside>
 					</section>
-					
+
 					<section>
 						<h3>like( $got, qr/expected/, $test_name );</h3>
 <pre><code data-trim>
@@ -598,7 +605,7 @@ not ok 1 - you should test more
 							unlike test works similar to like test but in reverse
 						</aside>
 					</section>
-					
+
 					<section>
 						<h3>cmp_ok( $got, $op, $expected, $test_name );</h3>
 <pre><code data-trim>
@@ -613,7 +620,7 @@ not ok 1 - is it golden?
 						<aside class="notes">
 						</aside>
 					</section>
-					
+-->
 					<section>
 						<h2>More Data Assertions</h2>
 <pre><code data-trim>
@@ -630,7 +637,7 @@ fail( $test_name );
 						<aside class="notes">
 						</aside>
 					</section>
-					
+<!--
 					<section>
 						<h3>can_ok( $module, @methods );</h3>
 <pre><code data-trim>
@@ -644,7 +651,7 @@ not ok 1 - TestModule->can('get_stuff')
 						<aside class="notes">
 						</aside>
 					</section>
-					
+
 					<section>
 						<h3>isa_ok( $object, $class, $object_name );</h3>
 <pre><code data-trim>
@@ -660,7 +667,7 @@ not ok 1 - 'A cool module' isa 'CoolModule'
 							new_ok works like isa_ok except that in returns an instantiated object as well. Module must use the new subroutine convention and return a single object of the requested module name in order to work.
 						</aside>
 					</section>
-					
+
 					<section>
 						<h3>pass or fail?</h3>
 <pre><code data-trim>
@@ -678,7 +685,7 @@ not ok 2 - It failed
 							You're not really testing anything with these subroutines but they can be useful to create a custom test that doesn't quite fit for another type of assertion
 						</aside>
 					</section>
-					
+-->
 					<section>
 						<h2>Testing Modules</h2>
 <pre><code data-trim>
@@ -702,7 +709,7 @@ not ok 2 - require ThatModule;
 							It's recommended that you run use_ok() inside a BEGIN block so its functions are exported at compile-time and prototypes are properly honored.
 						</aside>
 					</section>
-					
+
 					<section>
 						<h2>What about Data Structures?</h2>
 <pre><code data-trim>
@@ -719,11 +726,11 @@ not ok 1 - Hash returned is correct
 </code></pre>
 						<aside class="notes">
 							is_deeply() compares the dereferenced values of references, the references themselves (except for their type) are ignored. This means aspects such as blessing and ties are not considered "different".
-	
+
 							is_deeply() currently has very limited handling of function reference and globs. It merely checks if they have the same referent. This may improve in the future.
 						</aside>
 					</section>
-					
+
 					<section data-state="more_cowbell" data-background="images/flickr.com/more_cowbell.jpg">
 						<div class="overlay-text push-up-lg">
 							<h2>Want more tests for Data::Structures?</h2>
@@ -733,7 +740,7 @@ not ok 1 - Hash returned is correct
 							It's beyond the scope of this talk but there are other modules with more assertions related to Data Structures.
 						</aside>
 					</section>
-					
+
 					<section>
 						<h2>Diagnostic messages</h2>
 <pre><code data-trim>
@@ -746,19 +753,19 @@ diag explain $hash; # use explain to 'print' the hash as output
 						<aside class="notes">
 						</aside>
 					</section>
-					
+
 					<section>
 						<h2>Conditional Tests</h2>
 <pre><code data-trim>
 SKIP: {
 	skip "skip message", 1 if $condition;
-	
+
 	ok(my_test(), "My test worked");
 }
 
 TODO: {
 	local $TODO = "I still haven't got this done yet" if $condition;
-	
+
 	ok(some_other_test(), "Some test worked");
 }
 </code></pre>
@@ -766,7 +773,7 @@ TODO: {
 							If you follow TDD you likely won't be using TODO. However skip still has value. For example say you are writing a CPAN module and there are tests that you write for your development process but aren't necessary for installation.
 						</aside>
 					</section>
-					
+
 					<section>
 						<h2>Bailing Out</h2>
 <pre><code data-trim>
@@ -774,20 +781,22 @@ BAIL_OUT("Stop the Presses!");
 </code></pre>
 						<aside class="notes">
 							Very useful for critical failure, like a third-party service connection or database connection...
-							
+
 							There is also Test::Most which gives more control over how you bail out.
 						</aside>
 					</section>
-					
+
 					<section data-state="detour" data-background="images/flickr.com/detour.jpg">
 						<h2 class="overlay-text">Mock::Quick</h2>
+						<aside class="notes">
+						</aside>
 					</section>
-					
+
 					<section>
 						<a href="" target="_blank">Mock::Quick</a>
 <pre><code data-trim>
 use Mock::Quick;
- 
+
 my $control = qclass(
     -implement  => 'My::Package',
     -with_new   => 1, # Insert a generic new() method (blessed hash)
@@ -796,17 +805,90 @@ my $control = qclass(
     simple      => 'value', # Method that simply returns a value.
     method      => sub { ... }, # Custom method.
 );
- 
+
 my $obj = My::Package->new;
- 
+
 $control->override( foo => sub { ... });# Override a method
 $control->restore( 'foo' ); # Restore it to the original
 
 $control->undefine(); # Remove the namespace we created,
 </code></pre>
 					</section>
+					<aside class="notes">
+					</aside>
 				</section>
-				
+
+				<!-- Test::Stream -->
+				<section>
+					<section data-state="back_to_the_future" data-background="images/flickr.com/back_to_the_future.jpg">
+						<h2 class="overlay-text push-down-xxsm">Experimenting with an experiment</h2>
+						<aside class="notes">
+							Evangelism for what exodist is doing with the Test::* rewrite...
+						</aside>
+					</section>
+
+					<section>
+						<h2>Test::Stream</h2>
+
+						<ul>
+							<li class="fragment"><a href="https://metacpan.org/pod/Test::Stream" target="_blank">metacpan.org/pod/Test::Stream</a></li>
+							<li class="fragment">WARNING: Experimental</li>
+							<li class="fragment">WARNING 2: Not a drop in replacement for Test::More</li>
+							<li class="fragment">Directly built on the new internals instead of Test::Builder</li>
+						</ul>
+						<aside class="notes">
+						</aside>
+					</section>
+
+					<section>
+						<h2>Some new toys!</h2>
+<pre><code data-trim>
+skip_all($reason);
+
+mostly_like( $got, $expected, $test_name );
+
+does_ok( $object, $class, $object_name );
+
+ref_ok( $thing, $type, $test_name);
+</code></pre>
+						<aside class="notes">
+							skip_all - skip all tests, should be declared before any tests are ran
+							mostly_like - loosely compare data structures
+							does_ok - testing class or blessed instance for specific roles
+							ref_ok - check to see if thing is a ref (optionally of a specific type)
+						</aside>
+					</section>
+
+					<section>
+						<h2>Other differences from Test::More</h2>
+
+						<ul>
+							<li>Test::More does use strict and use warnings for you</li>
+							<li>No plan on import, use plan()</li>
+							<li>isa_ok behaves a little different</li>
+							<li>look at Test::Stream::Subtest for subtests</li>
+							<li>No $TODO variable, use <i>my $todo = todo($reason);</i></li>
+						</ul>
+						<aside class="notes">
+							isa_ok - now just tests a list of classes
+						</aside>
+					</section>
+
+					<section>
+						<h2>Other differences from Test::More</h2>
+
+						<ul>
+							<li>No use_ok / require_ok</li>
+							<li>No new_ok, use <i>ok( my $thing = $class->new($args) );</i></li>
+							<li>No eq_array, eq_hash or eq_set. Test::More doesn't recommend using them anyway</li>
+							<li>No explain, will possibly be implemented with a new name</li>
+						</ul>
+						<aside class="notes">
+							isa_ok - now just tests
+						</aside>
+					</section>
+				</section>
+
 				<!-- Devel::Cover -->
 				<section>
 					<section data-state="space_invaders_blanket" data-background="images/flickr.com/space_invaders_blanket.jpg">
@@ -815,10 +897,10 @@ $control->undefine(); # Remove the namespace we created,
 							Devel::Cover
 						</aside>
 					</section>
-					
+
 					<section>
 						<h2>Devel::Cover</h2>
-						
+
 						<ul>
 							<li class="fragment"><a href="https://metacpan.org/pod/Devel::Cover" target="_blank">metacpan.org/pod/Devel::Cover</a></li>
 							<li class="fragment">Get coverage results on modules and/or programs.</li>
@@ -833,10 +915,10 @@ $control->undefine(); # Remove the namespace we created,
 							This is the set of commands I threw into a shell script so I could quickly get my test coverage. This is for a uninstalled module specifically.
 						</aside>
 					</section>
-					
+
 					<section>
 						<h2>Sample Coverage Summary</h2>
-<pre class="fragment"><code data-trim>
+<pre><code data-trim>
 ------ ------ ------ ------ ------ ------ ------
   stmt   bran   cond    sub    pod   time  total
 ------ ------ ------ ------ ------ ------ ------
@@ -848,6 +930,7 @@ $control->undefine(); # Remove the namespace we created,
  100.0   50.0    n/a  100.0  100.0    0.4   96.6
   94.8   67.3   50.0   97.2  100.0  100.0   86.7
 ------ ------ ------ ------ ------ ------ ------</code></pre>
+						<p><a href="cover_db/blank_coverage.html" target="_blank">Test Coverage Sample</a></p>
 						<aside class="notes">
 							This is an example from a module I developed. You also will get a coverage summary HTML document That will show you line by line where you are missing coverage. If we have time I will show that later.
 							Statement - A statement is covered if it is executed by at test. A statement is not necessarily one line of code.
@@ -861,7 +944,7 @@ $control->undefine(); # Remove the namespace we created,
 						</aside>
 					</section>
 				</section>
-				
+
 				<!-- Application -->
 				<section>
 					<section data-state="application" data-background="images/flickr.com/application.jpg">
@@ -870,7 +953,7 @@ $control->undefine(); # Remove the namespace we created,
 							Let's break the common scenarios you are likely to run into...
 						</aside>
 					</section>
-					
+
 					<section>
 						<h2>Using an existing code base</h2>
 						<ul>
@@ -883,7 +966,7 @@ $control->undefine(); # Remove the namespace we created,
 							Team or Solo this is good advice
 						</aside>
 					</section>
-					
+
 					<section>
 						<h2>Creating a new code base</h2>
 						<ul>
@@ -897,7 +980,7 @@ $control->undefine(); # Remove the namespace we created,
 						</aside>
 					</section>
 				</section>
-				
+
 				<!-- Lego::From::PNG -->
 				<section>
 					<section data-background="images/lego_picture.jpg">
@@ -906,19 +989,19 @@ $control->undefine(); # Remove the namespace we created,
 							Last year I attended a number of lego related functions where I noticed a kind of lego build that really interested me. The lego painting. The lego painting in the background is one such example.
 						</aside>
 					</section>
-					
+
 					<section>
-						<h2>Then I wanted to do this talk at OpenWest on TDD and Test::More...</h2>
+						<h2>Then I wanted to do Yet Another&#8482; talk on TDD and Test::More...</h2>
 						<aside class="notes">
 						</aside>
 					</section>
-					
+
 					<section>
 						<h1>Why not do both?</h1>
 						<aside class="notes">
 						</aside>
 					</section>
-					
+
 					<section>
 						<h2><a href="http://metacpan.org/pod/Lego::From::PNG" target="_blank">metacpan.org/pod/Lego::From::PNG</a></h2>
 						<p><a href="http://github.com/gaudeon/Lego-From-Png" target="_blank">github.com/gaudeon/Lego-From-Png</a></p>
@@ -926,7 +1009,7 @@ $control->undefine(); # Remove the namespace we created,
 							Version 0.01 was released to CPAN as of May 6, 2015. It's still really rough around the edges but it works!
 						</aside>
 					</section>
-					
+
 					<section>
 						<h2>Test-first methodology... mostly</h2>
 						<ul>
@@ -939,7 +1022,7 @@ $control->undefine(); # Remove the namespace we created,
 						<aside class="notes">
 						</aside>
 					</section>
-					
+
 					<section>
 						<p><img src="images/avatar_cropped_pixelated_1.png" width="200" height="246"></p>
 						<p><a href="cover_db/coverage.html" target="_blank">Test Coverage - v0.02</a></p>
@@ -948,21 +1031,21 @@ $control->undefine(); # Remove the namespace we created,
 						</aside>
 					</section>
 				</section>
-				
+
 				<section data-state="lego_house" data-background="images/flickr.com/lego_house.jpg">
 					<h3 class="overlay-text push-up-sm">
 						Thanks!<br>
 						github.com/gaudeon/
 					</h3>
-					<p class="fragment overlay-text">The word "test" was used 140 times in the making of these slides.</p>
+					<p class="fragment overlay-text">The word "test" was used <strike>140</strike> 146 times in the making of these slides.</p>
 					<aside class="notes">
 					</aside>
 				</section>
-				
+
 			</div>
 
 		</div>
-		
+
 		<div class="credits">
 			<div class="credit cats" data-img="images/gratisography.com/cats.jpg">Photo: Ryan McGuire | gratisography.com | cc-zero</div>
 			<div class="credit bugged" data-img="images/flickr.com/bugged.jpg">Photo: Oℓivia | flickr.com/photos/kjellander | cc-by-nc-sa </div>
@@ -982,6 +1065,7 @@ $control->undefine(); # Remove the namespace we created,
 			<div class="credit lego_house" data-img="images/flickr.com/lego_house.jpg">Photo: Nana B Agyei | flickr.com/photos/nanagyei | cc-by</div>
 			<div class="credit no" data-img="images/flickr.com/no.jpg">Photo: Henry Burrows | flickr.com/photos/foilman | cc-by-sa</div>
 			<div class="credit detour" data-img="images/flickr.com/detour.jpg">Photo: Shannon Kokoska | flickr.com/photos/shannonmary | cc-by-nc-nd</div>
+			<div class="credit back_to_the_future" data-img="images/flickr.com/back_to_the_future.jpg">Photo: Peter Hopper | flickr.com/photos/whisperwolf | cc-by-nc</div>
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
