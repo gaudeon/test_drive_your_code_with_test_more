@@ -7,3 +7,4 @@ test/bower_components
 .swp
 .DS_Store
 images/.DS_Store
+cover_db/.*.swp
